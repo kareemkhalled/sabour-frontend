@@ -1,0 +1,49 @@
+.px36 {
+  font-size: 1.8vi;
+}
+.px28 {
+  font-size: 1.4vi;
+}
+.px26 {
+  font-size: 1.3vi;
+}
+.px24 {
+  font-size: 1.2vi;
+}
+.px22 {
+  font-size: 1.1vi;
+}
+
+.px20 {
+  font-size: 1vi;
+}
+
+.px18 {
+  font-size: 0.9vi;
+}
+
+.px16 {
+  font-size: 0.8vi;
+}
+
+.px14 {
+  font-size: 0.7vi;
+}
+
+.px12 {
+  font-size: 0.6vi;
+}
+
+.px10 {
+  font-size: 0.5vi;
+}
+.px8 {
+  font-size: 0.4vi;
+}
+.px6 {
+  font-size: 0.3vi;
+}
+/* @font-face {
+  font-family: 'CustomDigitalFont';
+  src: url('@/assets/fonts/digital-font.ttf') format('truetype');
+} */

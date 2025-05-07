@@ -1,0 +1,92 @@
+.cyan {
+  color: #19ecff;
+}
+
+.dark_cyan {
+  color: #0ea2c9;
+}
+
+.bright_cyan {
+  color: #03cdfb;
+}
+
+.bright_green {
+  color: #04fcd0;
+}
+
+.green_1 {
+  color: #268d69;
+}
+.black_d {
+  color: #000000;
+}
+.green_2 {
+  color: #1cac2b;
+}
+.dark_green {
+  color: #07a8a6;
+}
+
+.light_green {
+  color: #04fcd0;
+}
+.white {
+  color: #ffffff;
+}
+
+.light_cyan {
+  color: #86baf8;
+}
+
+.light_blue {
+  color: #3c9ef1;
+}
+.sky {
+  color: #78a0d1
+
+}
+
+.light_blue_2 {
+  color: #08bde0;
+}
+
+.orange {
+  color: #fa9324;
+}
+
+.light_red {
+  color: #ff8080;
+}
+
+.red_1 {
+  color: #c64c4b;
+}
+.red {
+  color: #ff0303;
+}
+.cyellow {
+  color: rgb(255, 255, 0);
+}
+
+.cblue {
+  color: rgb(1, 116, 224, 255);
+}
+.cdblue {
+  color: rgb(63, 223, 228);
+}
+.estblue {
+ color: #15a5c5;
+
+}
+.ceblue {
+  color: rgb(37, 150, 190);
+}
+.cwblue {
+  color: rgb(52, 182, 229);
+}
+.bturquoise {
+  color: rgb(23, 214, 231);
+}
+.radial_bar_color {
+  color: linear-gradient(to right, #9ed9f8, #3daaf9  , #0781f0);
+}
