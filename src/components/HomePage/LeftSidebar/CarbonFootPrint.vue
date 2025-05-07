@@ -2,7 +2,7 @@
   <div class="local_conatiner">
     <div class="data-holder2 underlined-text">
       <div class="img-wrapper">
-        <img src="@/assets/remote_assets/icon/co2.svg" />
+        <!-- <img src="@/assets/remote_assets/icon/co2.svg" /> -->
       </div>
       <div>
         Carbon Foot Print
