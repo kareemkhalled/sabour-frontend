@@ -1,54 +1,59 @@
-     
 <template>
-  <div class="local_conatiner">
-    <div class=" data-holder2 section-title">
-      <div class="square-icon"></div>
-      <div>Carbon Foot Print</div>
+  <div class="carbon-wrapper">
+    <div class="px12" >
+      <div class="underline" style="width: 30%;margin-bottom: .7vh;margin-top: .5vh;padding-left: 0.4vi;color: white;white-space: nowrap;">
+       Carbon Foot Print
+      </div>
     </div>
+
     <div class="Dounght_chart">
-      <div>
-        <DoughnutChart :value="100" :segment-values="[35, 25, 40]"
-          :segment-colors="[colors.dounght3, colors.dounght2, colors.dounght4]" bg_color="#000"  
-           center-text="Total"
-           glow-color="rgba(255, 255, 255, .5)"
-           height="5.8vi" width="5.8vi" unit=" "   />
+      <DoughnutChart
+        :value="100"
+        :segment-values="[35, 25, 40]"
+        :segment-colors="[colors.dounght3, colors.dounght2, colors.dounght4]"
+        bg_color="#000"
+        center-text="Total"
+        glow-color="rgba(255, 255, 255, .5)"
+        height="5.8vi"
+        width="5.8vi"
+        unit=" "
+      />
+      <div class="doughnut-container">
+        <!-- Row 1 -->
+        <div class="data-row">
+          <div class="data-item">
+            <img class="dot" src="@/assets/remote_assets/icon/rcfp.svg" alt="" />
+            Residention
+          </div>
+          <span class="value" style="color: #d4c464;">14 kg</span>
+          <span class="percentage" style="color: #d4c464;">35 %</span>
+        </div>
+        <!-- Row 2 -->
+        <div class="data-row">
+          <div class="data-item">
+            <img class="dot" src="@/assets/remote_assets/icon/ccfp.svg" alt="" />
+            Commercial
+          </div>
+          <span class="value" style="color: #e29003;">9 kg</span>
+          <span class="percentage" style="color: #e29003;">25 %</span>
+        </div>
+        <!-- Row 3 -->
+        <div class="data-row">
+          <div class="data-item">
+            <img class="dot" src="@/assets/remote_assets/icon/icfp.svg" alt="" />
+            Infrastructure
+          </div>
+          <span class="value" style="color: #b2b1b5;">16 kg</span>
+          <span class="percentage" style="color: #b2b1b5;">40 %</span>
+        </div>
       </div>
-    <div class="doughnut-container">
-    <!-- Row 1 -->
-    <div class="data-row">
-      <div class="data-item">
-        <img class="dot" src="@/assets/remote_assets/icon/rcfp.svg" alt="">
-        Residention
-      </div>
-      <span class="value" style="color: #d4c464;">14 kg</span>
-      <span class="percentage" style="color: #d4c464;">35 %</span>
     </div>
-    <!-- Row 2 -->
-    <div class="data-row">
-      <div class="data-item">
-        <img class="dot" src="@/assets/remote_assets/icon/ccfp.svg" alt="">
-        Commercial
-      </div>
-      <span class="value" style="color: #e29003;">9 kg</span>
-      <span class="percentage" style="color: #e29003;">25 %</span>
-    </div>
-    <!-- Row 3 -->
-    <div class="data-row">
-      <div class="data-item">
-        <!-- <img class="dot" :style="{ backgroundColor: colors.dounght4 }"></img> -->
-        <img class="dot" src="@/assets/remote_assets/icon/icfp.svg" alt="">
-        Infrastructure
-      </div>
-      <span class="value" style="color: #b2b1b5;">16 kg</span>
-      <span class="percentage" style="color: #b2b1b5;">40 %</span>
-    </div>
-    </div>
-  </div>
   </div>
 </template>
 
 <script setup>
 import DoughnutChart from '@/components/DoughnutChart.vue';
+
 const colors = {
   dounght3: '#d4c464',
   dounght2: '#e29003',
@@ -58,85 +63,72 @@ const colors = {
 </script>
 
 <style scoped>
-.local_conatiner
-{
-  letter-spacing: .05vi;
+.carbon-wrapper {
+  width: 16vi;
+  padding: 0.8vh 0.5vi 0.6vh 0.5vi;
+  display: flex;
+  flex-direction: column;
+  gap: .8vi;
+  font-size: 0.6vi;
   font-weight: 500;
-  font-size: .6vi;
+  color: #8cb6b5;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: .15vi solid rgba(170, 162, 162, 0.4);
+  border-bottom: none;
+  border-top: none;
+  border-right: none;
 }
+
 .Dounght_chart {
   display: flex;
-  /* justify-content: center; */
   align-items: center;
   gap: 1vi;
-  padding-bottom: 5%;
-  padding-left: 1vi;
 }
 
 .data-row {
-  width: 100%;
   display: flex;
-  gap: .5vi;
   align-items: center;
   justify-content: space-between;
-  /* background-color: #2a2a2a; */
-  background:linear-gradient(to right,#2a2a2a 50%,transparent);
-  border-radius: .5vi;
-  /* box-shadow: -4px 4px 8px rgba(206, 23, 23, 0.5);  */
-  padding: .4vi 0.5vi;
+  background-color: rgba(108, 116, 128, 0.137);
   border-radius: 0.2vi;
-   /* Necessary for pseudo-elements */
+  padding: 0.4vi 0.5vi;
+  gap: .5vi;
+  width: 8.5vw;
 }
+
 .doughnut-container {
   display: grid;
-  
-  gap: .7vi;
+  gap: 1.5vi;
   position: relative;
-  /* padding-left: .5vi; */
 }
 
 .doughnut-container::before,
 .doughnut-container::after {
   content: "";
   position: absolute;
-  /* height:.05vi;  */
-  /* background:linear-gradient(to right,#ffffff80 70%,transparent); */
-  background-color: rgba(255, 255, 255, 0.5); 
+  background-color: rgba(255, 255, 255, 0.5);
   width: 110%;
   left: 0;
 }
 
 .doughnut-container::before {
-  top: -.55vi; 
+  top: -0.55vi;
 }
 
 .doughnut-container::after {
-  bottom: -.55vi; 
+  bottom: -0.55vi;
 }
-/* .doughnut-container::before {
-  content: "";
-  position: absolute;
-  top: 0%;
-  left: -12%;
-  height: 100%;
-  width: 20%;
-  background: radial-gradient(circle at right, rgba(255, 255, 255, 0.5), transparent 80%);
-  border-radius: 18vi;  
-  overflow-block:hidden;
-}  */
+
 .data-item {
   display: flex;
-  /* color: #f9f7f780; */
   color: #a1a1a1;
   align-items: center;
-  gap: .3vi;
-  
+  gap: 0.3vi;
 }
 
 .dot {
   width: 0.6vi;
   height: 0.6vi;
-  /* border-radius: 50%; */
 }
 
 .value, .percentage {

@@ -1,22 +1,20 @@
 <template>
   <div class="container">
-    <div class="data-holder2 underlined-text" style="margin-bottom: 0.5vi;">
-      <div class="img-wrapper">
-        <img src="@/assets/remote_assets/icon/invoice2.svg" />
-      </div>
-      <div>
-        Operation Cost - Month (EGP) 
+    <div class="px12" >
+      <div class="underline" style="width: 30%;margin-bottom: .7vh;margin-top: .5vh;padding-left: 0.4vi;color: white;white-space: nowrap;">
+        Total Operation Cost - Month (EGP)
       </div>
     </div>
     <div>
-      <div class="invoices">
+   <div style="display: flex;  gap:1vh; flex-direction: column  ;justify-content: space-between;align-items: center;">
+       <div class="invoices">
         <div class="text-icon">
           <div class="icon"><img src="@/assets/remote_assets/icon/electric.svg" alt=""></div>
           <div class="text">Electrical</div>
         </div>
         <div class="invoicesValues background-bar bright_cyan  ">
           <div >
-            <AnimatedGradully :targetVolume="34510" :duration="2000" />
+            <AnimatedGradully :targetVolume="345100" :duration="2000" />
           </div>
           <div style="font-weight:500 ; font-size: 0.6vi;">+14%</div>
           <div>
@@ -55,6 +53,7 @@
           </div>          
         </div>
       </div>
+   </div>
     </div>
   </div>
 </template>
@@ -68,24 +67,32 @@ import AnimatedGradully from '@/components/AnimatedGradully.vue'
   letter-spacing: .07vi;
   font-weight: 600;
   font-size: .7vi;
+  width: 16.5vw;
+   border: .15vi solid rgba(170, 162, 162, 0.4);
+  border-bottom: none;
+  border-top: none;
+  border-left: none;
 }
 .invoices {
+    margin-top: .5vh;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 0.5vi;
   /* Align items vertically in the center */
   height: 2.5vi;
-  height: 2.5vi;
+  width: 100%;
   /* Add spacing between the divs */
-  padding-left: 0.5vi;
+  /* padding-left: 0.1vi;
+  padding-right: 0.5vi; */
 }
 .invoicesValues
 {
   display: flex;
   /* padding-right: .8vi; */
   justify-content:center;
-  gap: 2vi;
+  gap: 1.5vi;
   align-items: center;
 }
 .bright_cyan
@@ -123,8 +130,8 @@ import AnimatedGradully from '@/components/AnimatedGradully.vue'
 
 .text-icon {
   display: flex;
+  padding-left: .5vw;
   background-color: rgb(108 116 128 / 16%);
-  padding-left: .5vi;
   align-items: center;
   gap: .5vi;
   height: 60%;

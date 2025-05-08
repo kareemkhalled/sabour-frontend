@@ -1,9 +1,9 @@
+       
 <template>
   <div class="chiller-system">
-    <div class="px12" >
-      <div class="underline" style="width: 30%;margin-bottom: .7vh;margin-top: .5vh;padding-left: 0.4vi;color: white;  white-space: nowrap;">
-        Chillers System
-      </div>
+    <div class=" data-holder2 section-title" style="width: 20vw;">
+      <div class="square-icon"></div>
+      <div> Chillers System</div>
     </div>
     <div class="chiller-consumtiom-cost">
       <div class="chiller-consumtion" >
@@ -62,11 +62,11 @@
       <div class="scroll-wrapper">
         <table>
           <thead>
-            <tr class="px10" style="background: rgba(0, 0, 0, .2);font-size: 0.4vi;">
-              <th style="color: aqua;">Chillers&nbsp;&nbsp; </th>
-              <th style="color: aqua;">Status</th>
-              <th style="color: aqua;">Temp</th>
-              <th style="color: aqua;">Running Hours</th>
+            <tr class="px10" style=";font-size: 0.5vi;font-weigtht:bold">
+              <th style="color: #2389AD; ">Chillers&nbsp;&nbsp; </th>
+              <th style="color:#2389AD;">Status</th>
+              <th style="color: #2389AD;">Temp</th>
+              <th style="color: #2389AD;">Running Hours</th>
             </tr>
           </thead>
         </table>
@@ -95,7 +95,7 @@
 import { ref, onMounted } from "vue";
 import AnimatedGradully from '@/components/AnimatedGradully.vue'
 import BasicProgressBar from '@/components/BasicProgressBar2.vue'
-let bar_width = '9vi'
+let bar_width = '11vi'
 let bar_height = '0.6vh'
 
 const Chillers = [
@@ -203,6 +203,7 @@ onMounted(() => {
   flex-direction: column;
   justify-content: center;
   font-size: .5vi;
+  
 }
 
 .chillers {
@@ -234,14 +235,13 @@ onMounted(() => {
 
 .chiller-system {
   /* background: linear-gradient(to top, rgb(0, 0, 0), rgb(0 0 0 / 60%)); */
-  border: .15vi solid rgba(170, 162, 162, 0.4);
-  border-bottom: none;
-  border-top: none;
-  border-left: none;
+  
   padding-right: .25vi;
   color:rgb(161, 161, 161);
   font-size: .5vi;
   width: 16vi;
+    margin-bottom:1vh ;
+
 }
 
 .chiller-system h3 {
@@ -252,7 +252,7 @@ onMounted(() => {
 
 table {
   /* padding-left: 5%; */
-  width: 96%;
+  width: 98%;
   border-collapse: collapse;
   /* table-layout: fixed;  */
   background-color: rgba(0, 0, 0, 0.1);
@@ -267,14 +267,23 @@ thead {
   z-index: 2;
 }
 
-th,
+th {
+  /* padding: .2vh .2vi; */
+  padding:  0.25vi ;
+
+  /* font-size: .45vi; */
+  text-align: center;
+  font-weight: 300;
+  color:rgb(161, 161, 161);
+
+}
 td {
   /* padding: .2vh .2vi; */
   padding: 0.25vi;
 
-  font-size: .45vi;
-  text-align: left;
-  font-weight: 500;
+  /* font-size: .45vi; */
+  text-align: center;
+  font-weight: 300;
   color:rgb(161, 161, 161);
 
 }
@@ -309,6 +318,7 @@ tr:nth-child(odd) {
   max-height: 10vh;
   /* Define container height */
   overflow-y: auto;
+  
   /* Enable vertical scrolling */
 
 }
@@ -320,7 +330,7 @@ tr:nth-child(odd) {
 }
 
 .scroll-container {
-  height: 7vh;
+  height: 4vh;
   overflow: hidden;
   position: relative;
   margin-top: -0.25vi;
@@ -329,6 +339,7 @@ tr:nth-child(odd) {
 
 tbody {
   animation: scroll-up 15s linear infinite;
+  
 }
 
 @keyframes scroll-up {
@@ -345,6 +356,7 @@ tbody {
   }
 }
 .chiller-consumtiom-cost {
+  width: 18vw;
  font-size: .6vi;
  font-weight: 500;
   display: flex;
@@ -361,6 +373,7 @@ tbody {
   margin-left: .25vi;
 }
 .chiller-consumtion{
+  
  display: flex;
  gap: .5vi;
  /* padding-left: .6vi; */
@@ -372,6 +385,8 @@ tbody {
  /* padding-left: .6vi; */
 }
 .chiller-bars{
+    width: 18vw;
+
   margin-top: .6vh;
   margin-right: .25vi;
   margin-left: .25vi;
@@ -383,6 +398,8 @@ tbody {
 /*  border-bottom-style: dotted;*/
 }
 .chiller-table{
+    width: 18vw;
+
   margin-top: .7vh;
   margin-left: .25vi;
   margin-right: .25vi;

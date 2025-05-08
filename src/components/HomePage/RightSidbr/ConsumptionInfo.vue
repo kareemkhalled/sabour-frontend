@@ -5,37 +5,37 @@
     </div>
   <div class="security-wrapper">
     <div>
-      <div class="sub-section">
+      <!-- <div class="sub-section">
       <div class="dot"></div>
       <div>Access Control</div>
-    </div>
+    </div> -->
     <div class="item-row">
       <div class="item-card">
         <img src="@/assets/remote_assets/icon/icon11.png" alt="door" class="icon" />
-        <div class="label">Door</div>
+        <div class="label">Gates</div>
         <div class="value">21</div>
       </div>
       <div class="item-card">
         <img src="@/assets/remote_assets/icon/icon12.png" alt="door" class="icon" />
-        <div class="label">Elevator</div>
+        <div class="label">Street Lighting</div>
         <div class="value">14</div>
       </div>
     </div>
     </div>
     <div>
-      <div class="sub-section">
+      <!-- <div class="sub-section">
       <div class="dot"></div>
       <div>Lighting Control</div>
-    </div>
+    </div> -->
     <div class="item-row">
       <div class="item-card1">
         <img src="@/assets/remote_assets/icon/icon13.png" alt="door" class="icon" />
-        <div class="label">Public light</div>
-        <div class="value">14</div>
+        <div class="label">Cctv</div>
+        <div class="value">184</div>
       </div>
       <div class="item-card1">
         <img src="@/assets/remote_assets/icon/icon14.png" alt="door" class="icon" />
-        <div class="label">Facility light</div>
+        <div class="label">Emergency light</div>
         <div class="value">14</div>
       </div>
     </div>
@@ -65,7 +65,7 @@
   display: flex;
   align-items: center;
   gap: 0.5vi;
-  font-weight: 600;
+  /* font-weight: 600; */
   color: white;
 }
 
@@ -79,7 +79,7 @@
   display: flex;
   align-items: center;
   gap: 0.5vi;
-  font-weight: 500;
+  /* font-weight: 500; */
   color: #909090;
   margin-top: -1vi;
     margin-bottom: .5vi;
@@ -117,7 +117,7 @@
     width: 3.4vi;
 
   background-color: #151202;
-  height: 8vh;
+  /* height: 8vh; */
   border-radius: 0.4vi;
   padding: 0.4vi;
   text-align: center;
@@ -140,6 +140,7 @@
 
 .value {
   font-size: 0.8vi;
-  font-weight: bold;
+  color: #E2BA56;
+  /* font-weight: bold; */
 }
 </style>

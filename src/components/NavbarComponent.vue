@@ -46,7 +46,7 @@ export default {
         </div>
         <div style="display: flex;flex-direction: column; align-items: center; ;">
           <!-- <img src="@/assets/remote_assets/Atal/Logo9.png" style="width: 4.7vi;height: 1.7vi; margin-top: 1vi;border-radius:50%; "/> -->
-          <div class="park-lane"><img src="@/assets/remote_assets/Atal/Logo9 (1).png" style="width: 7.7vi;height: 4.7vi; margin-top:-4vi;margin-bottom:-2vh; border-radius:0% "/><span></span></div>
+          <div class="park-lane"><img src="@/assets/remote_assets/Atal/Logo9 (1).png" style="width: 8vi;height: 6vi; margin-top:-4vi;margin-bottom:-2vh; border-radius:0% "/><span></span></div>
           <!-- <div class="park-lane">PARK LANE <span></span></div> -->
         </div>
         <div class="links-group">
@@ -88,7 +88,7 @@ export default {
 } */
 
 .park-lane {
-  margin-top: 3.6vi;
+  margin-top: 2.8vi;
   position: relative;
   padding: 1vi 4vi;
   padding-bottom: 0.5vi;
@@ -152,7 +152,7 @@ export default {
   align-items: center;
   gap: 2vi;
   margin: 0 1.4vi;
-  margin-top: 1vi;
+  margin-top: .2vi;
 }
 
 .main-container {

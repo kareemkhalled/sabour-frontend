@@ -54,7 +54,7 @@
 body {
   min-height: 100vh;
   color: var(--color-text);
-  background: linear-gradient(to right, #7a5d25 80%, rgba(255, 215, 0, 0.3)); /* ذهب داكن إلى ذهبي شفاف */
+  background: black; /* ذهب داكن إلى ذهبي شفاف */
   transition:
     color 0.5s,
     background-color 0.5s;

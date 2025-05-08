@@ -52,11 +52,7 @@ export default {
     rgb(0, 0, 0) 80%,
     rgba(13, 12, 12, 0.818)
   ); */
-   background: linear-gradient(
-    to left,
-    rgba(30, 26, 1, 0.971) 75%,
-    rgb(0 0 0 / 100%)
-  );
+   background: black;
   box-shadow:
     -.4vw 0vw 0vw rgba(12, 12, 12, 0.786),
     1.5vw 0vw 0vw rgb(12, 12, 12);
@@ -64,7 +60,7 @@ export default {
 /* Video container */
 .video-background {
   position: fixed;
-  top: 0vh;
+  top: -4vh;
   /* left: 1vw; */
   width: 100%;
   height: 100%;
@@ -75,7 +71,7 @@ export default {
 
 .video-background video {
   position: absolute;
-  right: 3vw;
+  /* right: 3vw; */
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -91,7 +87,7 @@ transform: rotateY(45deg); */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100%;
+  height: 86.8vh;
   z-index: 1; /* Ensure content stays above video */
 }
 
@@ -127,7 +123,7 @@ transform: rotateY(45deg); */
 
 .leftsidebar {
   top: 0vi;
-  height: 85.1vh;
+  height: 100%;
   width: 0; 
   overflow: hidden; 
   background: linear-gradient(

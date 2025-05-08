@@ -23,7 +23,7 @@
                 :maxTicksLimit="24" :enable_ygrid="true"  />
         </div -->
         <div >
-          <Chart style="width:25vw; height: 9vw" 
+          <Chart style="width:24vw; height: 9vw" 
           :value="chartData[7] || 0"
           :fill_flag="true"
           :font_x="'10em'"
@@ -46,7 +46,7 @@ import Chart from '@/components/Chart.vue';
 const chartTitle = ref('Electric Monthly Cost');
 const chartData = ref(new Array(8).fill(0)); // Initial data
 const lineColors = ref(['#e8bf58']); // Default line color
-const fillColor = ref('#00c9c922'); // Default fill color
+const fillColor = ref('#151202'); // Default fill color
 const chart_unit =ref('EGP');
 // Chart max value calculation
 //const chartMaxValue = computed(() => Math.max(...chartData.value) * 1.6);

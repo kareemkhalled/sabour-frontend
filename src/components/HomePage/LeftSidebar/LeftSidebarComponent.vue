@@ -4,8 +4,8 @@
       <!-- <CompoundOccupancy/> -->
       <ElectricConsumption/>
       <!-- <TotalCost/> -->
-      <ConsumptionInfo/>
       <ConsumtionChart/>
+      <ChillerSystem/>
       <GasStatstics/>
     </div>
   </aside>
@@ -18,6 +18,8 @@ import ElectricConsumption from '../RightSidbr/ElectricConsumption.vue';
 import ConsumtionChart from '../RightSidbr/ConsumtionChart.vue';
 import ConsumptionInfo from '../RightSidbr/ConsumptionInfo.vue';
 import GasStatstics from '../RightSidbr/GasStatstics.vue';
+import ChillerSystem from '../Middlebar/ChillerSystem.vue';
+
 // import ParkStatistics from './ParkStatistics.vue';
 // import TotalCost from './TotalCost.vue';
 export default {
@@ -27,8 +29,8 @@ export default {
     ElectricConsumption,
     // TotalCost,
     ConsumtionChart,
-    GasStatstics,
-    ConsumptionInfo
+    ChillerSystem,
+    GasStatstics
     
     
   }

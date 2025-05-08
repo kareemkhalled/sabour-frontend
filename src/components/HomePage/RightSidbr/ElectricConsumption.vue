@@ -159,7 +159,7 @@ top: -.5vi;}
   top: -.6vi;
  
 }
-
+/* 
 .underline::after {
   content: '';
   position: absolute;
@@ -170,7 +170,7 @@ top: -.5vi;}
   background: linear-gradient(to right, transparent, #ffffff 50%, transparent);
   transform: scaleX(0.9);
   animation: underlineAnimation 8s infinite;
-}
+} */
 
 
 .fire-icon {

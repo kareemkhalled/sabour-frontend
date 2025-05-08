@@ -5,7 +5,7 @@
       <!-- <ConsumtionChart/> -->
       <CompoundOccupancy/>
       <CompoundSustainability/>
-      <CarbonFootPrint/>
+      <ConsumptionInfo/>
       <ParkStatistics/>
 
 
@@ -19,8 +19,10 @@
 // import AssetsMaintanance from './ElectricConsumption.vue';
 import ConsumptionInfo from './ConsumptionInfo.vue';
 // import ConsumtionChart from './ConsumtionChart.vue';
-// import TotalCost from '../LeftSidebar/TotalCost.vue';
+import GasStatstics from '../RightSidbr/GasStatstics.vue';
 import CompoundOccupancy from '../LeftSidebar/CompoundOccupancy.vue';
+// import ConsumptionInfo from '../RightSidbr/ConsumptionInfo.vue';
+
 import CarbonFootPrint from '../LeftSidebar/CarbonFootPrint.vue';
 import ParkStatistics from '../LeftSidebar/ParkStatistics.vue';
 import CompoundSustainability from './CompoundSustainability.vue';
@@ -34,7 +36,7 @@ export default {
     // TotalCost,
     CompoundOccupancy,
     CompoundSustainability,
-    CarbonFootPrint
+    ConsumptionInfo
     
   }
 };

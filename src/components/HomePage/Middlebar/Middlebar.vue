@@ -1,17 +1,17 @@
 <template>
     <div class="middlebar">
-            <ChillerSystem />
+            <TotalCost />
             <!-- <div class="virtical-line"></div> -->
             <middleChart />
             <!-- <div class="virtical-line"></div> -->
 
-            <AHUsSystem/>
+            <CarbonFootPrint/>
     </div>
 </template>
 
 <script setup>
-import AHUsSystem  from './AHUsSystem.vue';
-import ChillerSystem  from './ChillerSystem.vue';
+import CarbonFootPrint from '../LeftSidebar/CarbonFootPrint.vue';
+import TotalCost from '../LeftSidebar/TotalCost.vue';
 import middleChart  from './middleChart.vue';
 </script>
 
