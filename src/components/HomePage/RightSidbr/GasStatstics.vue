@@ -1,14 +1,9 @@
 <template>
   <div>
-    <div class="data-holder2 underlined-text">
-      <div class="img-wrapper">
-        <!-- <img src="@/assets/remote_assets/icon/occupancy.svg" /> -->
-      </div>
-     
-
-      <div>
-        Real Time Systems 
-      </div>
+   <div class=" data-holder2 section-title" style="width: 20vw;">
+      <div class="square-icon"></div>
+      <div>   Real Time Systems 
+</div>
     </div>
     <div>
       <div

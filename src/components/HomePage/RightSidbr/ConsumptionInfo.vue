@@ -58,6 +58,7 @@
   display: flex;
   justify-content: space-around;
   /* flex-direction: column; */
+  margin-bottom: .5vh;
   gap: 0.4vi;
 }
 

@@ -14,7 +14,7 @@
           Owners Vehicle
         </div>
         </div>
-        <div class="   bright_cyan" style="text-align: center;margin-bottom:4vh">
+        <div class="   bright_cyan" style="text-align: center;margin-bottom:2vh">
           <AnimatedGradully :targetVolume="324" :duration="2000" unit="" />
         </div>
       </div>
@@ -59,7 +59,7 @@
         </div>
       </div>
     </div>
-    <div class="underline" style="top: -4.5vi;"></div>
+    <div class="underline" style="top: -4vi;"></div>
   </div>
 </template>
 <script setup>

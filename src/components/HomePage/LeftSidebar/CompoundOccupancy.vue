@@ -1,12 +1,10 @@
+        Park Lane Occupancy / Unit
 <template>
   <div>
-    <div class="data-holder2 underlined-text">
-      <div class="img-wrapper">
-        <!-- <img src="@/assets/remote_assets/icon/occupancy.svg" /> -->
-      </div>
-      <div >
-        Park Lane Occupancy / Unit
-      </div>
+    <div class=" data-holder2 section-title" style="width: 20vw;">
+      <div class="square-icon"></div>
+      <div>  Compound Occupancy / Unit
+</div>
     </div>
     <div class="redial-occ">
       <div class="chart-box">

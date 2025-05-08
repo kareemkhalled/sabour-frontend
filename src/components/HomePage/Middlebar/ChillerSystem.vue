@@ -56,7 +56,7 @@
       </div>
     </div>
    </div>
-    <div class="chiller-table">
+    <!-- <div class="chiller-table">
     <div style="left: 5.5%; font-weight: 300; width: 100%; top: 4vh; color: white;" @mouseenter="pauseScrolling"
       @mouseleave="resumeScrolling">
       <div class="scroll-wrapper">
@@ -88,7 +88,7 @@
         </div>
       </div>
     </div>      
-  </div>
+  </div> -->
   </div>
 </template>
 <script setup>
