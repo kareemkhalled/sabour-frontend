@@ -19,6 +19,7 @@ import middleChart  from './middleChart.vue';
 .middlebar{
     display: flex;
     gap: .5vi;
+   
     /* background: linear-gradient(to top, rgb(0, 0, 0), rgb(0 0 0 / 60%)); */
 
     /* align-items: center; */

@@ -1,166 +1,145 @@
 <template>
-    <div>
-        <div class="data-holder2 underlined-text">
-          <div class="img-wrapper">
-            <!-- <img  src="@/assets/remote_assets/icon/occupancy.svg" /> -->
-          </div>       
-            <div>
-                Water Consumption 
-            </div> 
-                
-        </div>
-        <!-- <div>
-      <div class="photo-percent">
-        <div>
-              <img class="img"  src="@/assets/remote_assets/Atal/watericonn.png" />
-              <div class="percentage">{{ percentage }}%</div>
-        </div> 
-            <div class=" water-text underline " >
-                <div>Water Consumption </div>
-                <span style="position: relative;left: 2vi;top: .3vi;">{{ consumption }} m³/h</span>
-            </div>
-      </div>
-      <div class="middele-div ">
-            <div  style="padding: .2vi;">
-                Water Tank 
-            </div>
-
-            <div class="tank-bar">
-        
-                <div  class="tank-fill" :style="{ width: percentage + '%' }" >
-                    <span style="position: relative;left: 150%; top:-70%;" >{{ tankCapacity }} m³</span> 
-                </div>
-
-            </div>
-       </div>
-       <div class="pumps text">
-            <div style="padding: .2vi;" >water pump1</div>
-            <div  style="padding: .2vi;">water pump2</div>
-            <div  style="padding: .2vi;">water pump3</div>
-       </div>
-    </div>  -->
-        <div id="app">
-          <WaterConsumptionChart :percentage="70" :consumption="4679" :tankCapacity="50" />
-        </div>  
-        
-       
+    <div class=" data-holder2 section-title">
+      <div class="square-icon"></div>
+      <div>Security System</div>
     </div>
-    
-</template >
+  <div class="security-wrapper">
+    <div>
+      <div class="sub-section">
+      <div class="dot"></div>
+      <div>Access Control</div>
+    </div>
+    <div class="item-row">
+      <div class="item-card">
+        <img src="@/assets/remote_assets/icon/icon11.png" alt="door" class="icon" />
+        <div class="label">Door</div>
+        <div class="value">21</div>
+      </div>
+      <div class="item-card">
+        <img src="@/assets/remote_assets/icon/icon12.png" alt="door" class="icon" />
+        <div class="label">Elevator</div>
+        <div class="value">14</div>
+      </div>
+    </div>
+    </div>
+    <div>
+      <div class="sub-section">
+      <div class="dot"></div>
+      <div>Lighting Control</div>
+    </div>
+    <div class="item-row">
+      <div class="item-card1">
+        <img src="@/assets/remote_assets/icon/icon13.png" alt="door" class="icon" />
+        <div class="label">Public light</div>
+        <div class="value">14</div>
+      </div>
+      <div class="item-card1">
+        <img src="@/assets/remote_assets/icon/icon14.png" alt="door" class="icon" />
+        <div class="label">Facility light</div>
+        <div class="value">14</div>
+      </div>
+    </div>
+    </div>
+  </div>
+</template>
 
-
-
-
-<script>
-import WaterConsumptionChart from "@/components/WaterConsumptionChart.vue";
-
- 
-
-export default {
-name: "App",
-components: {
-  WaterConsumptionChart,
-},
-};
+<script setup>
+// لا حاجة لسكربت حاليًا، المكون ثابت
 </script>
 
-<!-- <style scoped>
-
-
-.photo-percent{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    background-color: rgba(108, 116, 128, 0.3);
-    padding: 0%;
-    margin: 2%;
-  }
-  .img{
-    position: relative;
-    left: 1vi;
-    top: .5vi;
-    height:50% ;
-    width: 50%;
-    border-radius: 50%;
-  }
-  .percentage {
-    position: relative;
-    top: -2.5vi;
-    left: 30%;
-    font-size: 10px;
-    font-weight: bold;
-    color: #ffa500;
-  }
-
-.water-text{
-    display: grid;
-    left: -15%;
-    color: white;
-   font-size: .8vi;
-   position: relative;
+<style scoped>
+.security-wrapper {
+  width: 17.5vi;
+  padding: 0.6vi;
+  border-radius: 0.8vi;
+  /* background-color: rgba(0, 0, 0, 0.1); */
+  font-size: 0.6vi;
+  color: #ccc;
+  display: flex;
+  justify-content: space-around;
+  /* flex-direction: column; */
+  gap: 0.4vi;
 }
 
-  .middele-div{
-    background-color: rgba(108, 116, 128, 0.3);
-    color: white;
-   font-size: .7vi;
-   position: relative;
-   top: .4vi;
-   width: 18.66vi;
-   height: 3vi;
-   padding: 0%;
-   margin: 2%;
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5vi;
+  font-weight: 600;
+  color: white;
 }
 
-  .tank-bar {
-    background-color: #333;
-    height: 8px;
-    width: 80%;
-    margin: 5px;
-    position: relative;
-    display: flex;
-  }
-  
-  .tank-fill {
-    display: flex;
-    background: linear-gradient(to left, #ffa500, #000);
-    height: 100%;
-    border-radius: 20%;
-  }
-  .pumps{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    font-weight: 400;
-    font-size: small;
-    position: relative;
-    left: -3%;
-    width: 100%;
-    height: 50px;
-    background-color: rgba(108, 116, 128, 0.3);
-    padding: 0%;
-    margin: 5%;
-    color: white;
-   font-size: .7vi;
-
-  }
-  .underline {
-  font-size:small;  /* Adjust font size */
-  font-weight:400; /* Semi-bold */
-  position: relative;
-  color: #ffffff; /* White text color */
+.square-icon {
+  width: 0.6vi;
+  height: 0.6vi;
+  border: 0.1vi solid #94591e;
 }
 
-.underline::after {
-  content: ''; /* Empty content for underline */
-  position: absolute; /* Position relative to the text */
-  top: 50%; /* Adjust to control underline distance */
-  left: 0;
-  width: 100%; /* Matches text width */
-  height: .10vi; /* Thickness of the underline */
-  /* background-color: #8a6c4c;  */
-  background:linear-gradient(to right, transparent, #f1f3fa 50%, transparent);}
+.sub-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5vi;
+  font-weight: 500;
+  color: #909090;
+  margin-top: -1vi;
+    margin-bottom: .5vi;
 
-</style> -->
+}
 
+.dot {
+  width: 0.25vi;
+  height: 0.25vi;
+  border-radius: 50%;
+  background-color: #00cfff;
+}
+
+.item-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.4vi;
+}
+
+.item-card {
+  background-color: #151202;
+  /* width: 55%; */
+  width: 3.4vi;
+  border-radius: 0.4vi;
+  padding: 0.4vi;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3vi;
+  align-items: center;
+    box-shadow: 0 0 .5vh rgba(213, 175, 80, 0.47)
+
+}
+.item-card1 {
+    width: 3.4vi;
+
+  background-color: #151202;
+  height: 8vh;
+  border-radius: 0.4vi;
+  padding: 0.4vi;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3vi;
+  align-items: center;
+    box-shadow: 0 0 .5vh rgba(213, 175, 80, 0.47)
+
+}
+
+.icon {
+  width: 1.5vi;
+  height: 1.5vi;
+}
+
+.label {
+  font-size: 0.6vi;
+}
+
+.value {
+  font-size: 0.8vi;
+  font-weight: bold;
+}
+</style>

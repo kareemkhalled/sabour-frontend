@@ -51,14 +51,14 @@ export default {
         </div>
         <div class="links-group">
           <li class="menu-item"><router-link to="/BuildingView">Energy</router-link></li>
-          <li class="menu-item"><router-link to="/">Buildings</router-link></li>
-          <li class="menu-item"><router-link to="/">Elevators</router-link></li>
+          <li class="menu-item"><router-link to="/">Security</router-link></li>
+          <li class="menu-item"><router-link to="/">Safety</router-link></li>
         </div>
       </ul>
     </div>
     
     <div>
-      <div class="logo" style="height:5.5vi; width:14vw" >
+      <div class="logo" style="height:5.5vi; width:14vw; margin-top:-2.5vh" >
         <img src="@/assets/remote_assets/Atal/newlogo.png"  />
         
 
@@ -88,7 +88,7 @@ export default {
 } */
 
 .park-lane {
-  margin-top: 3.5vi;
+  margin-top: 3.6vi;
   position: relative;
   padding: 1vi 4vi;
   padding-bottom: 0.5vi;

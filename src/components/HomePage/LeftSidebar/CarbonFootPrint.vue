@@ -1,12 +1,9 @@
+     
 <template>
   <div class="local_conatiner">
-    <div class="data-holder2 underlined-text">
-      <div class="img-wrapper">
-        <!-- <img src="@/assets/remote_assets/icon/co2.svg" /> -->
-      </div>
-      <div>
-        Carbon Foot Print
-      </div>
+    <div class=" data-holder2 section-title">
+      <div class="square-icon"></div>
+      <div>Carbon Foot Print</div>
     </div>
     <div class="Dounght_chart">
       <div>

@@ -1,12 +1,8 @@
-<template>
+    <template>
   <div class="local_container">
-    <div class="data-holder2 underlined-text">
-      <div class="img-wrapper">
-        <!-- <img src="@/assets/remote_assets/icon/occupancy.svg" /> -->
-      </div>
-      <div>
-        Parking Statistics
-      </div>
+    <div class=" data-holder2 section-title">
+      <div class="square-icon"></div>
+      <div>Parking Statistics</div>
     </div>
     <div class="park-content">
       <div class="box-content">
@@ -18,7 +14,7 @@
           Owners Vehicle
         </div>
         </div>
-        <div class="   bright_cyan" style="text-align: center;">
+        <div class="   bright_cyan" style="text-align: center;margin-bottom:4vh">
           <AnimatedGradully :targetVolume="324" :duration="2000" unit="" />
         </div>
       </div>
@@ -63,7 +59,7 @@
         </div>
       </div>
     </div>
-    <div class="underline" style="top: -3.5vi;"></div>
+    <div class="underline" style="top: -4.5vi;"></div>
   </div>
 </template>
 <script setup>

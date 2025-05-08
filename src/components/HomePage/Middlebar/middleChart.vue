@@ -1,20 +1,21 @@
 
+      
 <template>
     <div>
-      <div class="px12" >
+       <div class="px12" >
       <div class="underline" style="width: 30%;margin-bottom: .7vh;margin-top: .5vh;padding-left: 0.4vi;color: white;white-space: nowrap;">
-        Chillers System Tempreture Monitor
+        Operation Cost - Runtime (EGP)
       </div>
     </div>
         <div class="chartTitles" > 
           <div class="tab-container">
-            <div class="tab" :class="{ clicked: isELEClicked }" @click="ElEButtonClick" style="color: #53FBC3;">Supply</div>
-            <div class="tab" :class="{ clicked: isWaterClicked  }" @click="WaterButtonClick" style="color: #1A8CC7;">Return</div>
+            <div class="tab" :class="{ clicked: isELEClicked }" @click="ElEButtonClick">Electric</div>
+            <div class="tab" :class="{ clicked: isWaterClicked  }" @click="WaterButtonClick">water</div>
+            <div class="tab" :class="{ clicked: isOxygenClicked }" @click="OxygenButtonClick">Gas</div>
           </div>          
-          <div  class="px14" style="font-weight: 400; ;padding: .8v 1vi;color: white;" >
+          <div  class="px14" style="font-weight: 400;background: linear-gradient(to right,#2a2a2a 80%,transparent) ;padding: .8v 1vi;" >
             {{ parseFloat(chartData[7]).toFixed(0) }}&nbsp;{{chart_unit}}&nbsp;
           </div>
-         
         </div>
         <!-- div >
             <Chartdb style="width:19vw; height: 7vw" :labels="chartLabels" :data="chartData" :line_colors="lineColors"
@@ -22,7 +23,7 @@
                 :maxTicksLimit="24" :enable_ygrid="true"  />
         </div -->
         <div >
-          <Chart style="width:24.7vw; height: 9.2vw ; margin-left: .3vi;"  
+          <Chart style="width:25vw; height: 9vw" 
           :value="chartData[7] || 0"
           :fill_flag="true"
           :font_x="'10em'"
@@ -44,9 +45,9 @@ import Chart from '@/components/Chart.vue';
 // Chart properties
 const chartTitle = ref('Electric Monthly Cost');
 const chartData = ref(new Array(8).fill(0)); // Initial data
-const lineColors = ref(['#02E9E9']); // Default line color
+const lineColors = ref(['#e8bf58']); // Default line color
 const fillColor = ref('#00c9c922'); // Default fill color
-const chart_unit =ref('°C');
+const chart_unit =ref('EGP');
 // Chart max value calculation
 //const chartMaxValue = computed(() => Math.max(...chartData.value) * 1.6);
 const chartMaxValue = ref(Math.max(...chartData.value) * 1.6);
@@ -91,8 +92,8 @@ const ElEButtonClick = () => {
   isELEClicked.value = true;
   isOxygenClicked.value = false;
   isWaterClicked.value = false;
-  chart_unit.value='°C';
-  startUpdatingChart('#02E9E9', '#02E9E9', 6, 8);
+  chart_unit.value='EGP';
+  startUpdatingChart('#e8bf58', '#00c9c922', 4000, 4500);
 };
 
 const WaterButtonClick = () => {
@@ -100,12 +101,20 @@ const WaterButtonClick = () => {
   isWaterClicked.value = true;
   isELEClicked.value = false;
   isOxygenClicked.value = false;
-  chart_unit.value="°C";
-  startUpdatingChart('#56ace0', '#56ace022', 14, 16);
+  chart_unit.value="EGP";
+  startUpdatingChart('#56ace0', '#56ace022', 120, 150);
 };
 
+const OxygenButtonClick = () => {
+  chartTitle.value = 'Oxygen Monthly Cost';
+  isOxygenClicked.value = true;
+  isELEClicked.value = false;
+  isWaterClicked.value = false;
+  chart_unit.value="m³";
+  startUpdatingChart('#c25700', '#c2570022', 90, 130);
+};
 onMounted(()=>{
-  startUpdatingChart('#02E9E9', '#00c9c922', 6, 6.9);
+  startUpdatingChart('#e8bf58', '#00c9c922', 4000, 4500);
 
 })
 // Cleanup interval on component unmount
@@ -117,25 +126,15 @@ onBeforeUnmount(() => {
 /* Tab container */
 .tab-container {
   display: flex;
-  /* align-items: center; */
-  /* justify-content: center; */
+  align-items: center;
+  justify-content: center;
   gap: .25vi;
-  background-color: #0e0f104f; /* Dark blue background */
+  background-color: #0e0f10; /* Dark blue background */
   border-radius: .15vi;
-  margin-left: 8.5vi;
+  margin-left: 2.5vi;
   width: fit-content;
-  white-space: nowrap;
 }
-.underline::after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 0.2vh;
-  margin-top: .3vh;
-  background: linear-gradient(to right, transparent, #1b606b 50%, transparent);
-  transform: scaleX(0.9);
-  animation: underlineAnimation 8s infinite;
-}
+
 /* Individual tab */
 .tab {
   padding: .15vi .35vi;
@@ -160,12 +159,14 @@ onBeforeUnmount(() => {
 
 .chartTitles
 {
+  padding-top: 1vh;
   padding-right: 1vi;
   display:flex;
+  margin-left: 9vw;
   /* justify-content:space-; */
   /* font-size: .5vi;
   font-weight: 400; */
-  gap: 1vi;
+  gap: 2vi;
   color: #ebe7e3;
 }
 button {

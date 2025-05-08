@@ -1,196 +1,144 @@
 <template>
-    <div>
-        <div class="data-holder2 underlined-text" style="margin-bottom:.5vi ;">
-            <div class="img-wrapper">
-                <!-- <img src="@/assets/remote_assets/icon/occupancy.svg" /> -->
-            </div>
-            <div>
-               Consumption Montoring 
-            </div>
-        </div>
-        <div class="chartTitles" > 
-          <div class="tab-container">
-            <div class="tab" :class="{ clicked: isELEClicked }" @click="ElEButtonClick">Electric</div>
-            <div class="tab" :class="{ clicked: isWaterClicked  }" @click="WaterButtonClick">water</div>
-            <div class="tab" :class="{ clicked: isOxygenClicked }" @click="OxygenButtonClick">Gas</div>
-          </div>          
-          <div  class="px14" style="font-weight: 400;background: linear-gradient(to right,#2a2a2a 80%,transparent) ;padding: .8v 1vi;" >
-            {{ parseFloat(chartData[7]).toFixed(0) }}&nbsp;{{chart_unit}}&nbsp;
+  <div class="water-tanks">
+    <div class=" data-holder2 section-title">
+      <div class="square-icon"></div>
+      <div>Water Tank Levels</div>
+    </div>
+
+    <div class="tank-container">
+      <div
+        class="tank"
+        v-for="(tank, index) in tanks"
+        :key="index"
+      >
+        <div class="tank-label">{{ tank.name }}</div>
+        <div class="tank-visual">
+          <div
+            class="tank-fill"
+            :style="{
+              height: tank.level + '%',
+              backgroundColor: tank.color,
+              animationDelay: (index * 0.3) + 's'
+            }"
+          >
+            <div class="wave"></div>
           </div>
         </div>
-        <!-- div >
-            <Chartdb style="width:19vw; height: 7vw" :labels="chartLabels" :data="chartData" :line_colors="lineColors"
-                :fill_colors="fillColors" :chart_label="'temp'" :max_value="ChartMaxVale" :font_x="8" :refresh_rate="1"
-                :maxTicksLimit="24" :enable_ygrid="true"  />
-        </div -->
-        <div >
-          <Chart style="width:19vw; height: 7vw" 
-          :value="chartData[7] || 0"
-          :fill_flag="true"
-          :font_x="'10em'"
-          :font_y="'12em'"
-          :max_value="chartMaxValue"
-          :refresh_rate="1"
-          :fill_color="fillColor"
-          :line_color="lineColors"
-          />
-        </div>
-        <!-- :line_color="'#faac27'" -->
+        <div class="tank-percentage">{{ tank.level }}%</div>
+      </div>
     </div>
+  </div>
 </template>
 
-<script setup>
-import { ref, computed, onBeforeUnmount, onMounted } from 'vue';
-import Chart from '@/components/Chart.vue';
-
-// Chart properties
-const chartTitle = ref('Electric Monthly Cost');
-const chartData = ref(new Array(8).fill(0)); // Initial data
-const lineColors = ref(['#e8bf58']); // Default line color
-const fillColor = ref('#00c9c922'); // Default fill color
-const chart_unit =ref('kw');
-// Chart max value calculation
-//const chartMaxValue = computed(() => Math.max(...chartData.value) * 1.6);
-const chartMaxValue = ref(Math.max(...chartData.value) * 1.6);
-
-// Active interval ID for cleanup
-let activeInterval = null;
-
-// Utility function for random number generation
-const customRandom = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
-
-// Function to clear the active interval
-const clearActiveInterval = () => {
-  if (activeInterval) {
-    clearInterval(activeInterval);
-    activeInterval = null;
-  }
+<script>
+export default {
+  name: "WaterTanksVue",
+  setup() {
+    const tanks = [
+      { name: "Tank A", level: 75, color: "rgba(0, 191, 255, 0.4)" },
+      { name: "Tank B", level: 50, color: "rgba(255, 215, 0, 0.4)" },
+      { name: "Tank C", level: 30, color: "rgba(255, 140, 0, 0.4)" },
+    ];
+    return { tanks };
+  },
 };
-
-// Function to start chart updates dynamically
-const startUpdatingChart = (color, fill, min, max) => {
-  clearActiveInterval();
-
-  // Update chart properties
-  lineColors.value = [color];
-  fillColor.value = fill;
-
-  activeInterval = setInterval(() => {
-    const newValue = customRandom(min, max);
-    chartData.value.push(newValue);
-    if (chartData.value.length > 4) chartData.value.shift(); // Keep chartData at max 8 items
-    chartMaxValue.value = Math.max(...chartData.value) * 1.6;
-  }, 3000); // Update interval
-};
-
-// Button click handlers for chart tabs
-const isOxygenClicked = ref(false);
-const isELEClicked = ref(true);
-const isWaterClicked = ref(false);
-
-const ElEButtonClick = () => {
-  chartTitle.value = 'Electric Monthly Cost';
-  isELEClicked.value = true;
-  isOxygenClicked.value = false;
-  isWaterClicked.value = false;
-  chart_unit.value='KW';
-  startUpdatingChart('#e8bf58', '#00c9c922', 4000, 4500);
-};
-
-const WaterButtonClick = () => {
-  chartTitle.value = 'Water Monthly Cost';
-  isWaterClicked.value = true;
-  isELEClicked.value = false;
-  isOxygenClicked.value = false;
-  chart_unit.value="m³";
-  startUpdatingChart('#56ace0', '#56ace022', 120, 150);
-};
-
-const OxygenButtonClick = () => {
-  chartTitle.value = 'Oxygen Monthly Cost';
-  isOxygenClicked.value = true;
-  isELEClicked.value = false;
-  isWaterClicked.value = false;
-  chart_unit.value="m³";
-  startUpdatingChart('#c25700', '#c2570022', 90, 130);
-};
-onMounted(()=>{
-  startUpdatingChart('#e8bf58', '#00c9c922', 4000, 4500);
-
-})
-// Cleanup interval on component unmount
-onBeforeUnmount(() => {
-  clearActiveInterval();
-});
 </script>
+
 <style scoped>
-/* Tab container */
-.tab-container {
+.water-tanks {
+  padding: 0.2vi;
+  color: #ccc;
+  font-size: 0.4vi;
+  font-weight: 500;
+  margin-bottom: 1vh;
+}
+
+.tank-container {
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: .25vi;
-  background-color: #0e0f10; /* Dark blue background */
-  border-radius: .15vi;
-  margin-left: 2.5vi;
-  width: fit-content;
+  /* justify-content: space-between; */
+  gap: 1.8vw;
+  height: 17vh;
+  align-items: flex-end;
+  margin-top: -1.5vh;
 }
 
-/* Individual tab */
-.tab {
-  padding: .15vi .35vi;
-  font-size: .6vi;
-  font-weight: 600;
-  color: #77829a; /* Grayish text color */
-  border-radius: .25vi;
-  transition: all 0.3s ease;
-  cursor: pointer;
+.tank {
+  width: 3.5vi;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #151202;
+  /* background:linear-gradient(#2a2a2a -50%,transparent); */
+  border: 0.08vi solid rgba(255, 255, 255, 0.2);
+  padding: 0.5vi;
+  border-radius: 0.4vi;
+    box-shadow: 0 0 .5vh rgba(213, 175, 80, 0.47)
+
 }
 
-/* Active tab style */
-.tab.clicked {
-  background-color: #3e4d6c; /* Slightly lighter blue background */
-  color: #d3cdcd; /* White text for the active tab */
-  box-shadow: inset 0 0 .25vi rgba(255, 255, 255, 0.3);
-}
-/* Hover Effect */
-.tab:hover {
-  color: #ffffff;
+.tank-label {
+  font-size: 0.5vi;
+  margin-bottom: 0.3vi;
+  color: #a1a1a1;
 }
 
-.chartTitles
-{
-  padding-right: 1vi;
-  display:flex;
-  /* justify-content:space-; */
-  /* font-size: .5vi;
-  font-weight: 400; */
-  gap: 5vi;
-  color: #ebe7e3;
-}
-button {
-  font-size: .55vi;
-  font-weight: 300;
-  user-select: none;
-  /* border: 0.1vi solid #ffffff;
-  border-radius: 0.2vi; */
-  padding: 0.07vi .3vi;
-  /* color: #fffffc; */
-  background-color: transparent;
-  cursor: pointer;
-  transition: transform 0.1s ease;
+.tank-visual {
+  width: 90%;
+  height: 10vh;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 0.05vi solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  border-radius: 0.3vi;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
 }
 
-button:hover {
-  color: #ffffff;
+.tank-fill {
+  width: 100%;
+  position: relative;
+  animation: floatWater 2.5s ease-in-out infinite alternate;
+}
+.tank-fill .wave {
+  position: absolute;
+  bottom: 0;
+  width: 200%;
+  height: 120%;
+  background: rgba(24, 254, 254, 0.1);
+  border-radius: 35%;
+  animation: waveAnimation 2s ease-in-out infinite;
+  transform: translate(-25%, 0); /* حتى يبدأ الموج من المنتصف */
 }
 
-button.clicked {
-  transform: translateY(+0.3vi);
+.tank-percentage {
+  font-size: 0.45vi;
+  margin-top: 0.3vi;
+  color: #ccc;
 }
 
-.chart_table
-{
+/* الحركة الرأسية */
+@keyframes floatWater {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-0.3vi); }
+}
 
+/* تموّج الماء */
+@keyframes waveAnimation {
+  0% {
+    transform: translate(-25%, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(-30%, -3%) rotate(1deg);
+  }
+  50% {
+    transform: translate(-25%, 0) rotate(0deg);
+  }
+  75% {
+    transform: translate(-20%, 3%) rotate(-1deg);
+  }
+  100% {
+    transform: translate(-25%, 0) rotate(0deg);
+  }
 }
 </style>

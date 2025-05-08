@@ -1,168 +1,139 @@
 <template>
-  <div class="sidebar">
-    <div class="px12" >
-      <div class="underline" style="width: 30%;margin-bottom: .7vh;margin-top: .5vh;padding-left: 0.4vi;color: white;">
-        AHUs System
+  <div class="cost-wrapper">
+     <div class="px12" >
+      <div class="underline" style="width: 30%;margin-bottom: .7vh;margin-top: .5vh;padding-left: 0.4vi;color: white;  white-space: nowrap;">
+        Operation Cost - Month (EGP)
       </div>
     </div>
-    <!-- Donut Chart -->
-    <div class="ahu-system">
-      <div class="right-side">
-        <div class="right-content px12">
-          <div class="contents">
-            <div style="font-weight: 600;">Warehouse1</div>
-            <div style="display: flex;justify-content: space-between;color: white;font-weight: 500;">
-              <div class="text-shadow">6 ON</div>
-              <div class="text-shadow">24°C</div>
-            </div>
-          </div>
-          
-          <div>
-            <div class="contents">
-              <div >Adminstration</div>
-              <div style="display: flex;justify-content: space-between; gap: 0.5vi;color: white;font-weight: 500;">
-                <div class="text-shadow">6 ON</div>
-                <div class="text-shadow">24°C</div>
-              </div>
-            </div>
-          </div>
+
+    <div class="invoices">
+      <div class="text-icon">
+        <div class="icon">
+          <img src="@/assets/remote_assets/icon/electric.svg" alt="" />
         </div>
-        <div style="display: flex; align-items: center;justify-content: center;margin
-        : -0.5vi;padding-right:0.5vi">
-        <DonutChart2 />
+        <div class="text">Electrical</div>
       </div>
-        <div>
-          <div class="right-content">
-            <div class="contents">
-              <div >Warehouse2</div>
-              <div style="display: flex;justify-content: space-between;color: white;font-weight: 500;">
-                <div class="text-shadow">6 ON</div>
-                <div class="text-shadow">24°C</div>
-              </div>
-            </div>
-            <div style="width:34%; display: flex;flex-direction: column">
-              <div class="contents">
-                <div style="text-align: center;">Service</div>
-                <div style="display: flex;justify-content: space-between;color: white;font-weight: 500;">
-                  <div class="text-shadow">6 ON</div>
-                  <div class="text-shadow">24°C</div>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div class="values">
+        <div><AnimatedGradully :targetVolume="34510" :duration="2000" /></div>
+        <div class="change">+14%</div>
+        <div><img src="@/assets/remote_assets/icon/up.png" alt="" class="arrow" /></div>
+      </div>
+    </div>
+
+    <div class="invoices">
+      <div class="text-icon">
+        <div class="icon">
+          <img src="@/assets/remote_assets/icon/water2.svg" alt="" />
         </div>
+        <div class="text">Water</div>
       </div>
+      <div class="values">
+        <div><AnimatedGradully :targetVolume="64520" :duration="2000" /></div>
+        <div class="change">-20%</div>
+        <div><img src="@/assets/remote_assets/icon/down.png" alt="" class="arrow" /></div>
+      </div>
+    </div>
 
-
-
-
+    <div class="invoices">
+      <div class="text-icon">
+        <div class="icon">
+          <img src="@/assets/remote_assets/icon/gas1.svg" alt="" />
+        </div>
+        <div class="text">Gas</div>
+      </div>
+      <div class="values">
+        <div><AnimatedGradully :targetVolume="57600" :duration="2000" /></div>
+        <div class="change">+9%</div>
+        <div><img src="@/assets/remote_assets/icon/up.png" alt="" class="arrow" /></div>
+      </div>
     </div>
   </div>
 </template>
 
-<script>
-import DonutChart2 from "@/components/DoughnutChart2.vue";
-
+<script setup>
 import AnimatedGradully from '@/components/AnimatedGradully.vue';
-export default {
-  name: "RightSidebar",
-  components: {
-    DonutChart2,
-  },
-};
 </script>
 
 <style scoped>
-.underline::after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 0.2vh;
-  margin-top: .3vh;
-  /* background: linear-gradient(to right, transparent, #ffffff 50%, transparent); */
-  background: linear-gradient(to right, transparent, #1b606b 50%, transparent);
-
-  transform: scaleX(0.9);
-  animation: underlineAnimation 8s infinite;
-}
-
-.sidebar {
-  /* background: linear-gradient(to top, rgb(0, 0, 0), rgb(0 0 0 / 60%)); */
-  border: .15vi solid rgba(170, 162, 162, 0.4);
+.cost-wrapper {
+  width: 16vi;
+ border: .15vi solid rgba(170, 162, 162, 0.4);
   border-bottom: none;
   border-top: none;
   border-right: none;
-  /* border-radius: .5vi; */
-  width: 15vi;
-  /* background-color: #020205; */
-  /* background-color: rgba(3, 23, 44, 0.806); */
-  padding-bottom: 0.5vh;
-  /* border-radius: 1vi; */
-  padding-top:0.2vh;
-}
-.contents{
- display: flex;
- gap: 1.2vh;
- flex-direction:column;
- /* background-color: rgba(4, 19, 70, 0.221); */
- padding: 0.2vi;
- border: .1vi solid rgba(82, 85, 94, 0.655);
- border-radius: 0.3vi;
- width: 4vi;
- text-align: center;
- /* box-shadow: 0 4px 4px rgba(85, 160, 159, 0.5); */
-}
-.ahu-system {
+  padding: 0.8vh 0.5vi 0.6vh 0.5vi;
   display: flex;
-  align-items: end;
-  gap: 3vh;
-  margin-top: 1vh;
-  margin-right: 1.4vh;
-  margin-left: .5vi;
-  border: .15vi solid rgba(19, 113, 180, 0.4);
-  border-radius: .8vi;
-}
-
-.right-side {
-    padding-left: 0.5vi;
-    padding-top: 0.8vh;
-    padding-bottom: .6vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: .8vh;
-}
-.text-shadow{
-/* text-shadow: 1px 1px 3px rgb(164, 185, 193) ; */
-}
-.right-content {
-  display: flex;
-  gap: 3.8vi;
+  flex-direction: column;
+  gap: .8vi;
+  font-size: 0.6vi;
+  font-weight: 500;
   color: #8cb6b5;
-  width: 100%;
-  font-size: .5vi;
-  font-weight: 400;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
-
-.number {
+.title-section {
   display: flex;
-  /* justify-content: space-between; */
-  /* justify-content:start; */
-  gap: 1.5vi;
-  width: 100%;
+  align-items: center;
+  gap: 0.6vi;
+  margin-bottom: 0.5vi;
 }
 
-.content {
+.img-wrapper img {
+  width: 1.2vi;
+  height: 1.2vi;
+}
+
+.invoices {
   display: flex;
-  /* justify-content: center ; */
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(4, 19, 70, 0.221);
+  padding: 0.3vi;
+  border: 0.1vi solid rgba(82, 85, 94, 0.655);
+  border-radius: 0.3vi;
+  /* height: 2.5vi; */
+}
+
+.text-icon {
+  display: flex;
   align-items: center;
   gap: 0.5vi;
-  color: #8cb6b5;
-  /* background: linear-gradient(to right, transparent, #192F50 50%, transparent); */
-  /* background-color: rgba(108, 116, 128, 0.068); */
-
+  background-color: rgba(108, 116, 128, 0.16);
+  border-radius: 0.2vi;
+  /* padding: 0.3vi;     */
+  width: 32%;
+  height: 100%;
+  justify-content: center;
 }
 
+.icon img {
+  width: 1vi;
+  height: 1vi;
+}
 
+.text {
+  font-size: 0.7vi;
+  font-weight: 600;
+  color: #a1a1a1;
+}
+
+.values {
+  display: flex;
+  align-items: center;
+  gap: 1.5vi;
+  justify-content: center;
+  background-color: rgba(108, 116, 128, 0.137);
+  border-radius: 0.2vi;
+  height: 100%;
+  width: 65%;
+}
+
+.change {
+  font-weight: 500;
+  font-size: 0.6vi;
+}
+
+.arrow {
+  width: 1.2vi;
+}
 </style>

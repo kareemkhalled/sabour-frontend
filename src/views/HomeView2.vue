@@ -2,7 +2,7 @@
   <div class="building-view-page">
     <!-- Video Background -->
     <div class="video-background">
-      <video autoplay muted loop>
+      <video autoplay muted loop >
         <source
           src="@/assets/remote_assets/Atal/ahly-sabbour-wadi zaha.mp4"
           type="video/mp4"
@@ -46,7 +46,7 @@ export default {
 .middlechart {
   position: relative;
   margin-top:  auto;
-  right: 21.5vw;
+  right: 20.2vw;
   /* background: linear-gradient(
     to top,
     rgb(0, 0, 0) 80%,
@@ -58,7 +58,7 @@ export default {
     rgb(0 0 0 / 100%)
   );
   box-shadow:
-    -1.2vw 0vw 0vw rgba(12, 12, 12, 0.786),
+    -.4vw 0vw 0vw rgba(12, 12, 12, 0.786),
     1.5vw 0vw 0vw rgb(12, 12, 12);
 }
 /* Video container */
@@ -75,6 +75,7 @@ export default {
 
 .video-background video {
   position: absolute;
+  right: 3vw;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -130,11 +131,11 @@ transform: rotateY(45deg); */
   width: 0; 
   overflow: hidden; 
   background: linear-gradient(
-    to right,
-    rgba(30, 26, 1, 0.971) 75%,
+    to left,
+    rgba(30, 26, 1,0)-285%,
     rgb(0 0 0 / 100%)
   );
-  /* box-shadow: 10px 0 20px rgba(24, 24, 24, 0.9),0 -25px 20px rgba(24, 24, 24, .9); */
+    box-shadow: -10px 0 20px rgba(24, 24, 24, 0.9),0 -25px 20px rgba(24, 24, 24, 0.9);
 
   transition: width 1s ease-in-out;
   left: 0;
@@ -150,8 +151,8 @@ transform: rotateY(45deg); */
     box-shadow: -10px 0 20px rgba(24, 24, 24, 0.9),0 -25px 20px rgba(24, 24, 24, 0.9);
      */
   background: linear-gradient(
-    to left,
-    rgba(30, 26, 1, 0.971) 75%,
+    to right,
+    rgba(30, 26, 1,0)-285%,
     rgb(0 0 0 / 100%)
   );
   box-shadow:

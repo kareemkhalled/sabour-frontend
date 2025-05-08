@@ -1,13 +1,9 @@
 
 <template>
   <div >
-    <div class="data-holder2 underlined-text">
-      <div class="img-wrapper">
-        <!-- <img src="@/assets/remote_assets/icon/occupancy.svg" /> -->
-      </div>
-      <div>
-        Energy Consumption Runtime
-      </div>
+    <div class=" data-holder2 section-title">
+      <div class="square-icon"></div>
+      <div>Energy Consumption Runtime</div>
     </div>
 
     <div class="half-radial">
@@ -154,7 +150,7 @@ top: -.5vi;}
   align-items: center;
   justify-content: space-around;
   color: #a1a1a1;
-  background-color: rgba(108, 116, 128, 0.19);
+  background-color:#151202;
   height: 1.5vi; 
   font-weight: 500;
   border-radius: .8vi;
@@ -170,7 +166,7 @@ top: -.5vi;}
   left: 0;
   width: 100%;
   height: .10vi;
-  top: 1.25vi;
+  top: 32.70vi;
   background: linear-gradient(to right, transparent, #ffffff 50%, transparent);
   transform: scaleX(0.9);
   animation: underlineAnimation 8s infinite;

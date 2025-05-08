@@ -16,6 +16,20 @@
   display: contents;
 }
 
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5vi;
+  font-weight: 600;
+  color: white;
+}
+
+.square-icon {
+  width: 0.6vi;
+  height: 0.6vi;
+  border: 0.1vi solid #94591e;
+}
+
 .bgimg {
   width: 100%;
   height: 100%;
