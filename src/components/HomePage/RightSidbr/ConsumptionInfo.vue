@@ -11,12 +11,12 @@
     </div> -->
     <div class="item-row">
       <div class="item-card">
-        <img src="@/assets/remote_assets/icon/icon11.png" alt="door" class="icon" />
+        <img src="@/assets/remote_assets/icon/gates.svg" alt="door" class="icon" />
         <div class="label">Gates</div>
         <div class="value">21</div>
       </div>
       <div class="item-card">
-        <img src="@/assets/remote_assets/icon/icon12.png" alt="door" class="icon" />
+        <img src="@/assets/remote_assets/icon/street-light.svg" alt="door" style="width: 4vw;height:3vh " />
         <div class="label">Street Lighting</div>
         <div class="value">14</div>
       </div>
@@ -29,12 +29,12 @@
     </div> -->
     <div class="item-row">
       <div class="item-card1">
-        <img src="@/assets/remote_assets/icon/icon13.png" alt="door" class="icon" />
+        <img src="@/assets/remote_assets/icon/cctv.svg" alt="door" class="icon" />
         <div class="label">Cctv</div>
         <div class="value">184</div>
       </div>
       <div class="item-card1">
-        <img src="@/assets/remote_assets/icon/icon14.png" alt="door" class="icon" />
+        <img src="@/assets/remote_assets/icon/light-emergency.svg" alt="door" class="icon" />
         <div class="label">Emergency light</div>
         <div class="value">14</div>
       </div>
@@ -132,8 +132,8 @@
 }
 
 .icon {
-  width: 1.5vi;
-  height: 1.5vi;
+  width: 1.9vi;
+  height: 3.2vh;
 }
 
 .label {
