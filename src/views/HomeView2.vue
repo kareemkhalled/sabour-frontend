@@ -46,21 +46,25 @@ export default {
 .middlechart {
   position: relative;
   margin-top:  auto;
-  right: 20.2vw;
+  border-radius: 1%;
+  right: 20.3vw;
   /* background: linear-gradient(
     to top,
     rgb(0, 0, 0) 80%,
     rgba(13, 12, 12, 0.818)
   ); */
-   background: black;
-  box-shadow:
+background: linear-gradient(
+    to bottom,
+    rgba(127, 124, 105, 0)-285%,
+    rgb(21, 20, 15)
+  );  /* box-shadow:
     -.4vw 0vw 0vw rgba(12, 12, 12, 0.786),
-    1.5vw 0vw 0vw rgb(12, 12, 12);
+    1.5vw 0vw 0vw rgb(12, 12, 12); */
 }
 /* Video container */
 .video-background {
   position: fixed;
-  top: -4vh;
+  top: -4.9vh;
   /* left: 1vw; */
   width: 100%;
   height: 100%;
@@ -75,7 +79,7 @@ export default {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: scale(0.700); /* Scale the video to cover the entire container */
+  transform: scale(0.900); /* Scale the video to cover the entire container */
   /* transform: rotateX(30deg);
 transform: rotateY(45deg); */
   /* transform: perspective(27000px) rotateY(45deg); */
@@ -128,10 +132,10 @@ transform: rotateY(45deg); */
   overflow: hidden; 
   background: linear-gradient(
     to left,
-    rgba(30, 26, 1,0)-285%,
-    rgb(0 0 0 / 100%)
+    rgba(127, 124, 105, 0)-285%,
+    rgb(21, 20, 15)
   );
-    box-shadow: -10px 0 20px rgba(24, 24, 24, 0.9),0 -25px 20px rgba(24, 24, 24, 0.9);
+    box-shadow: -10px 0 20px rgba(24, 24, 24, 0),0 -25px 20px rgba(24, 24, 24, 0.4);
 
   transition: width 1s ease-in-out;
   left: 0;
@@ -148,12 +152,12 @@ transform: rotateY(45deg); */
      */
   background: linear-gradient(
     to right,
-    rgba(30, 26, 1,0)-285%,
-    rgb(0 0 0 / 100%)
+    rgba(127, 124, 105, 0)-285%,
+    rgb(21, 20, 15)
   );
   box-shadow:
-    10px 0 20px rgba(24, 24, 24, 0.9),
-    0 -25px 20px rgba(24, 24, 24, 0.9);
+    10px 0 20px rgba(24, 24, 24, 0),
+    0 -25px 20px rgba(24, 24, 24, 0.4);
   transition: width 1s ease-in-out;
   right: 0;
   animation: showSidebar 1s ease-in-out 0s forwards; 

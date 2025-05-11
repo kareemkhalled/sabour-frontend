@@ -59,6 +59,7 @@
   justify-content: space-around;
   /* flex-direction: column; */
   margin-bottom: .5vh;
+  margin-top: -1.5vh;
   gap: 0.4vi;
 }
 
@@ -101,7 +102,7 @@
 }
 
 .item-card {
-  background-color: #151202;
+  /* background-color: #151202; */
   /* width: 55%; */
   width: 3.4vi;
   border-radius: 0.4vi;
@@ -117,7 +118,7 @@
 .item-card1 {
     width: 3.4vi;
 
-  background-color: #151202;
+  /* background-color: #151202; */
   /* height: 8vh; */
   border-radius: 0.4vi;
   padding: 0.4vi;
@@ -137,10 +138,16 @@
 
 .label {
   font-size: 0.6vi;
+  font-weight: 600;
+  color: #a6abb5;
+  /* Light bluish text */
+  letter-spacing: 0.04vi;
+  margin-bottom: -0.2vi;
 }
 
 .value {
-  font-size: 0.8vi;
+  font-size: 0.6vi;
+  font-weight: 600;
   color: #E2BA56;
   /* font-weight: bold; */
 }

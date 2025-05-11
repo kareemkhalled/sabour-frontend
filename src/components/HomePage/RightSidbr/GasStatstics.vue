@@ -7,7 +7,7 @@
     </div>
     <div>
       <div
-        style="left: 5.5%; font-weight: 300; width: 95%; top: 10.2vi; color: #a1a1a1;"
+        style="left: 5.5%; font-weight: 300; width: 101%; top: 10.2vi; color: #a1a1a1;"
         @mouseenter="pauseScrolling"
         @mouseleave="resumeScrolling"
       >

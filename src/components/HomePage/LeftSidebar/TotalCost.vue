@@ -6,7 +6,7 @@
       </div>
     </div>
     <div>
-   <div style="display: flex;  gap:1vh; flex-direction: column  ;justify-content: space-between;align-items: center;">
+   <div style="display: flex;  gap:0vh; flex-direction: column  ;justify-content: space-between;align-items: center;margin-top: 2.5vh;">
        <div class="invoices">
         <div class="text-icon">
           <div class="icon"><img src="@/assets/remote_assets/icon/electric.svg" alt=""></div>

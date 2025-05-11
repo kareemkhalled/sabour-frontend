@@ -8,7 +8,7 @@
     <div class="chiller-consumtiom-cost">
       <div class="chiller-consumtion" >
         <!-- <img style="height: .7vi;width: .7vi;" src="@/assets/remote_assets/icon/elec9.svg" alt=""> -->
-        <span style="color: #8cb6b5;">
+        <span style="color: #248eb3;">
           Consumptions:
         </span>
         <span style="padding-left: .2vi;">
@@ -16,7 +16,7 @@
         </span>
       </div>
       <div class="chiller-cost">
-        <span style="color: #8cb6b5;">
+        <span style="color: #248eb3;">
           Cost:
         </span>
         <span style="padding-left: .2vi;">
@@ -196,6 +196,7 @@ onMounted(() => {
   font-size: .6vi;
   padding: .6vi;
 
+
 }
 
 .chiller-container {
@@ -240,7 +241,7 @@ onMounted(() => {
   color:rgb(161, 161, 161);
   font-size: .5vi;
   width: 16vi;
-    margin-bottom:1vh ;
+    margin-bottom:2vh ;
 
 }
 

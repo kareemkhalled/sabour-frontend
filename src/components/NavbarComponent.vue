@@ -159,7 +159,8 @@ export default {
   /* background-color: #00000096; */
   /* background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, .7));
   box-shadow: 0 1vi 2vi rgba(0, 0, 0, 0.9); */
-   background:linear-gradient(to bottom, rgba(21, 18, 2, 4.929)80%, rgb(0 0 0 / 100%));;
+   background:linear-gradient(to bottom,  rgba(127, 124, 105, 0)-285%,
+    rgb(21, 20, 15));;
     box-shadow: 10px 0 20px rgba(24, 24, 24, 0.9),0 -25px 20px rgba(24, 24, 24, 2);
   display: flex;
   justify-content: space-between;

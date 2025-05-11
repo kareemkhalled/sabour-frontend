@@ -5,7 +5,7 @@
       <div>Water & Fire Tank Levels</div>
     </div>
 
-    <div class="horizontal-group">
+    <div class="horizontal-group " style="margin-top: -2vh;">
       <!-- Water Tanks -->
       <div class="tank-group">
         <div class="tank" v-for="(tank, index) in waterTanks" :key="'water-' + index">
@@ -23,8 +23,8 @@
             </div>
           </div>
           <div class="tank-percentage">{{ tank.level }}% | {{ tank.levelInMeters }} m</div>
-          <div class="tank-info">💧 P: {{ tank.pressure }} bar</div>
-          <div class="tank-info" style="white-space: nowrap;">🔁 F: {{ tank.flow }} L/min</div>
+          <div class="tank-info"> P: {{ tank.pressure }} bar</div>
+          <div class="tank-info" style="white-space: nowrap;"> F: {{ tank.flow }} L/min</div>
         </div>
       </div>
 
@@ -48,8 +48,8 @@
             </div>
           </div>
           <div class="tank-percentage">{{ tank.level }}% | {{ tank.levelInMeters }} m</div>
-          <div class="tank-info">💧 P: {{ tank.pressure }} bar</div>
-          <div class="tank-info" style="white-space: nowrap;">🔁 F: {{ tank.flow }} L/min</div>
+          <div class="tank-info"> P: {{ tank.pressure }} bar</div>
+          <div class="tank-info" style="white-space: nowrap;"> F: {{ tank.flow }} L/min</div>
         </div>
       </div>
     </div>
@@ -62,13 +62,13 @@ export default {
   name: "WaterTanksVue",
   setup() {
     const waterTanks = [
-      { name: "Water Tank A", level: 75, levelInMeters: 5.2, pressure: 2.1, flow: 120, color: "rgba(0, 191, 255, 0.4)" },
-      { name: "Water Tank B", level: 50, levelInMeters: 3.4, pressure: 1.8, flow: 90, color: "rgba(0, 191, 255, 0.4)" },
+      { name: "Water Tank A", level: 75, levelInMeters: 5.2, pressure: 2.1, flow: 120, color: "rgba(39, 198, 251, .7)" },
+      { name: "Water Tank B", level: 50, levelInMeters: 3.4, pressure: 1.8, flow: 90, color: "rgba(39, 198, 251, .7)"},
     ];
 
     const fireTanks = [
-      { name: "Fire Tank 1", level: 60, levelInMeters: 4.0, pressure: 5.5, flow: 100, color: "rgba(255, 80, 80, 0.5)" },
-      { name: "Fire Tank 2", level: 45, levelInMeters: 2.9, pressure: 5.2, flow: 85, color: "rgba(255, 80, 80, 0.5)" },
+      { name: "Fire Tank 1", level: 60, levelInMeters: 4.0, pressure: 5.5, flow: 100, color: "rgba(251, 95, 0, .7)" },
+      { name: "Fire Tank 2", level: 45, levelInMeters: 2.9, pressure: 5.2, flow: 85, color: "rgba(251, 95, 0, .7)" },
     ];
 
     return { waterTanks, fireTanks };
@@ -82,7 +82,7 @@ export default {
   color: #ccc;
   font-size: 0.4vi;
   font-weight: 500;
-  margin-bottom: 1vh;
+  margin-bottom: 1.5vh;
 }
 
 .tank-group-title {
@@ -97,27 +97,28 @@ export default {
 
 
 .tank {
-  width: 2.8vi;
-  background-color: #151202;
-  border: 0.08vi solid rgba(255, 255, 255, 0.2);
+  width: 2.4vi;
+  height: 15vh;
+  /* background-color: #151202; */
+  /* border: 0.08vi solid rgba(255, 255, 255, 0.2); */
   padding: 0.6vi;
   border-radius: 0.4vi;
-  box-shadow: 0 0 .5vh rgba(213, 175, 80, 0.47);
+    box-shadow: 0 0 .5vh rgba(213, 175, 80, 0.47);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .tank.fire {
-  border-color: rgba(255, 80, 80, 0.4);
-  box-shadow: 0 0 0.6vh rgba(255, 80, 80, 0.3);
+  /* border-color: rgba(255, 80, 80, 0.4); */
+    box-shadow: 0 0 .5vh rgba(213, 175, 80, 0.47)
 }
 
 .tank-label {
   font-size: 0.4vi;
   margin-bottom: 0.3vi;
   color: #a1a1a1;
-  font-weight: 500;
+  font-weight: 600;
   white-space: nowrap;
 }
 
@@ -159,7 +160,8 @@ export default {
 .tank-info {
   font-size: 0.4vi;
   margin-top: 0.2vi;
-  color: #bbb;
+  font-weight: 600;
+  color: #a1a1a1;
 }
 .horizontal-group {
   display: flex;

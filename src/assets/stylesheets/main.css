@@ -81,6 +81,15 @@
   text-decoration: none; 
 }
 
+
+.title1 {
+  font-size: 0.6vi;
+  font-weight: 600;
+  color: #a6abb5;
+  /* Light bluish text */
+  letter-spacing: 0.04vi;
+  margin-bottom: 0.5vi;
+}
 .title-1-ul::after {
   content: '';
   position: absolute;

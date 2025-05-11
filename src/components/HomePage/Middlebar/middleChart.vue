@@ -23,7 +23,7 @@
                 :maxTicksLimit="24" :enable_ygrid="true"  />
         </div -->
         <div >
-          <Chart style="width:24vw; height: 9vw" 
+          <Chart style="width:24vw; height: 7.8vw" 
           :value="chartData[7] || 0"
           :fill_flag="true"
           :font_x="'10em'"
