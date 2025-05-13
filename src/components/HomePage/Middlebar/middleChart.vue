@@ -23,7 +23,7 @@
                 :maxTicksLimit="24" :enable_ygrid="true"  />
         </div -->
         <div >
-          <Chart style="width:24vw; height: 7.8vw" 
+          <Chart style="width:24vw; height: 8.3vw" 
           :value="chartData[7] || 0"
           :fill_flag="true"
           :font_x="'10em'"
@@ -140,7 +140,7 @@ onBeforeUnmount(() => {
   padding: .15vi .35vi;
   font-size: .6vi;
   font-weight: 600;
-  color: #77829a; /* Grayish text color */
+  color: #535c6f; /* Grayish text color */
   border-radius: .25vi;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -148,7 +148,7 @@ onBeforeUnmount(() => {
 
 /* Active tab style */
 .tab.clicked {
-  background-color: #3e4d6c; /* Slightly lighter blue background */
+  background-color: #01e6f692; /* Slightly lighter blue background */
   color: #d3cdcd; /* White text for the active tab */
   box-shadow: inset 0 0 .25vi rgba(255, 255, 255, 0.3);
 }
@@ -159,7 +159,6 @@ onBeforeUnmount(() => {
 
 .chartTitles
 {
-  padding-top: 1vh;
   padding-right: 1vi;
   display:flex;
   margin-left: 9vw;
@@ -168,6 +167,7 @@ onBeforeUnmount(() => {
   font-weight: 400; */
   gap: 2vi;
   color: #ebe7e3;
+  margin-top: -1.2VH;
 }
 button {
   font-size: .55vi;

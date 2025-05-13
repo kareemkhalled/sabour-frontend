@@ -199,7 +199,7 @@ onMounted(() => {
   width: 3vi; /* Adjust size */  
   height: 3vi; /* Adjust size */  
   border-radius: 50%;  
-  background: url('@/assets/remote_assets/icon/recording.png'); /* Use only the image as background */  
+  background: url('@/assets/remote_assets/icon/call-recorder-svgrepo-com.svg'); /* Use only the image as background */  
   background-size: cover; /* Ensure the image covers the button */  
   background-position: center; /* Center the image */  
   display: flex;  

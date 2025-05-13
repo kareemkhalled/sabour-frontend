@@ -86,13 +86,13 @@ const data = reactive(Data)
   justify-content: space-between;
   gap: 0.5vi;
   height: 2.5vi;
-  width: 100%;
+  width: 90%;
 }
 
 .invoicesValues {
   display: flex;
   justify-content: center;
-  gap: 1.5vi;
+  gap: 1.2vi;
   align-items: center;
 }
 

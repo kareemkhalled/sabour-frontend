@@ -87,7 +87,7 @@ export default {
               justify-content: center;
               font-size: 0.8vi;
               font-weight: 700;
-              color: #5492e9;
+              color: #01E6F6;
               padding-bottom: 2.5vi;
               user-select: none;
             "

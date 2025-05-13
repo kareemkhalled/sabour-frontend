@@ -56,9 +56,9 @@ export default {
 
 .middlechart {
   position: relative;
-  margin-top:  auto;
+  margin-top:  64vh;
   border-radius: 1%;
-  right: 20.2vw;
+  right: 20vw;
   /* background: linear-gradient(
     to top,
     rgb(0, 0, 0) 80%,
