@@ -2,7 +2,7 @@
   <div class="building-view-page">
     <!-- Video Background -->
     <div class="video-background">
-      <video autoplay muted loop >
+      <video autoplay muted loop playsinline>>
         <source
           src="@/assets/remote_assets/Atal/ahly-sabbour-wadi zaha.mp4"
           type="video/mp4"
