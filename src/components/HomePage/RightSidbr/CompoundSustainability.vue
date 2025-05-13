@@ -43,7 +43,7 @@
     </div>
     <div
       class="underline"
-      style="top: -0.9vi; margin-top: 4vh; margin-bottom: 7vh"
+      style="top: -1.25vi; margin-top: 4vh; margin-bottom: 7vh"
     ></div>
     <div class="solar_system" style="margin-top: 1vi; margin-bottom: 0.5vi">
       <div>
