@@ -1,8 +1,9 @@
 <template>
   <div class="cost-wrapper">
      <div class="px12" >
-      <div class="underline" style="width: 30%;margin-bottom: .7vh;margin-top: .5vh;padding-left: 0.4vi;color: white;  white-space: nowrap;">
-        Operation Cost - Month (EGP)
+      <div class="underline" style=" font-size: 0.6vi;
+  font-weight: 350; width: 30%;margin-bottom: .7vh;margin-top: .5vh;padding-left: 0.4vi;color: white;  white-space: nowrap;">
+        Operation Cost - Month (OR)
       </div>
     </div>
 

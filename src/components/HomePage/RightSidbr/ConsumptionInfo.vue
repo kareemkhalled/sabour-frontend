@@ -1,5 +1,5 @@
 <template>
-    <div class=" data-holder2 section-title">
+    <div class=" data-holder2 section-title underlined-text">
       <div class="square-icon"></div>
       <div>Security System</div>
     </div>
@@ -13,12 +13,13 @@
       <div class="item-card">
         <img src="@/assets/remote_assets/icon/gates.svg" alt="door" class="icon" />
         <div class="label">Gates</div>
-        <div class="value">21</div>
+        <div class="value">25</div>
       </div>
-      <div class="item-card">
-        <img src="@/assets/remote_assets/icon/street-light.svg" alt="door" style="width: 4vw;height:3vh " />
-        <div class="label">Street Lighting</div>
-        <div class="value">14</div>
+     
+      <div class="item-card1">
+        <img src="@/assets/remote_assets/icon/cctv.svg" alt="door" class="icon" />
+        <div class="label">CCTV</div>
+        <div class="value">184</div>
       </div>
     </div>
     </div>
@@ -28,14 +29,14 @@
       <div>Lighting Control</div>
     </div> -->
     <div class="item-row">
-      <div class="item-card1">
-        <img src="@/assets/remote_assets/icon/cctv.svg" alt="door" class="icon" />
-        <div class="label">Cctv</div>
-        <div class="value">184</div>
+       <div class="item-card">
+        <img src="@/assets/remote_assets/icon/street-light.svg" alt="door" style="width: 4vw;height:3vh " />
+        <div class="label">St Light</div>
+        <div class="value">159</div>
       </div>
       <div class="item-card1">
         <img src="@/assets/remote_assets/icon/light-emergency.svg" alt="door" class="icon" />
-        <div class="label">Emergency light</div>
+        <div class="label">Emrg light</div>
         <div class="value">14</div>
       </div>
     </div>
@@ -44,7 +45,6 @@
 </template>
 
 <script setup>
-// لا حاجة لسكربت حاليًا، المكون ثابت
 </script>
 
 <style scoped>
@@ -58,8 +58,8 @@
   display: flex;
   justify-content: space-around;
   /* flex-direction: column; */
-  margin-bottom: .5vh;
-  margin-top: -1.5vh;
+  margin-bottom: 1.2vh;
+  margin-top: -.8vh;
   gap: 0.4vi;
 }
 

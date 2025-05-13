@@ -43,21 +43,30 @@ export default {
   flex-direction: column;
 } 
 
+.underlined-text::after {
+  content: ''; /* Empty content for underline */
+  position: absolute; /* Position relative to the text */
+  top: 1vi; /* Adjust to control underline distance */
+  left: 0;
+  width: 100%; /* Matches text width */
+  height: .13vi; /* Thickness of the underline */
+  /* background-color: #8a6c4c;  */
+   background:linear-gradient(to right, transparent, #8a6c4c 50%, transparent);
+}
+
 .middlechart {
   position: relative;
   margin-top:  auto;
   border-radius: 1%;
-  right: 20.3vw;
+  right: 20.2vw;
   /* background: linear-gradient(
     to top,
     rgb(0, 0, 0) 80%,
     rgba(13, 12, 12, 0.818)
   ); */
-background: linear-gradient(
-    to bottom,
-    rgba(127, 124, 105, 0)-285%,
-    rgb(21, 20, 15)
-  );  /* box-shadow:
+ background: linear-gradient(to top, rgb(0, 0, 0), rgb(0 0 0 / 60%));;
+    box-shadow: -10px 0 20px rgba(24, 24, 24, 0.9),0 -15px 80px rgba(24, 24, 24, 0.9);
+      /* box-shadow:
     -.4vw 0vw 0vw rgba(12, 12, 12, 0.786),
     1.5vw 0vw 0vw rgb(12, 12, 12); */
 }
@@ -130,14 +139,11 @@ transform: rotateY(45deg); */
   height: 100%;
   width: 0; 
   overflow: hidden; 
-  background: linear-gradient(
-    to left,
-    rgba(127, 124, 105, 0)-285%,
-    rgb(21, 20, 15)
-  );
-    box-shadow: -10px 0 20px rgba(24, 24, 24, 0),0 -25px 20px rgba(24, 24, 24, 0.4);
-
+  background:linear-gradient(to right, rgb(0, 0, 0), rgb(0 0 0 / 60%));;
+    box-shadow: 10px 0 20px rgba(24, 24, 24, 0.9),0 -25px 20px rgba(24, 24, 24, 0.9);
   transition: width 1s ease-in-out;
+  left: 0;
+  animation: showSidebar 1s ease-in-out 0s forwards;
   left: 0;
   animation: showSidebar 1s ease-in-out 0s forwards;
 }
@@ -150,14 +156,10 @@ transform: rotateY(45deg); */
   /* background:linear-gradient(to left, rgb(22, 22, 22)85%, rgb(0 0 0 / 60%));;
     box-shadow: -10px 0 20px rgba(24, 24, 24, 0.9),0 -25px 20px rgba(24, 24, 24, 0.9);
      */
-  background: linear-gradient(
-    to right,
-    rgba(127, 124, 105, 0)-285%,
-    rgb(21, 20, 15)
-  );
-  box-shadow:
-    10px 0 20px rgba(24, 24, 24, 0),
-    0 -25px 20px rgba(24, 24, 24, 0.4);
+   background: linear-gradient(to left, rgb(0, 0, 0), rgb(0 0 0 / 60%));;
+    box-shadow: -10px 0 20px rgba(24, 24, 24, 0.9),0 -25px 20px rgba(24, 24, 24, 0.9);
+    
+    
   transition: width 1s ease-in-out;
   right: 0;
   animation: showSidebar 1s ease-in-out 0s forwards; 

@@ -118,7 +118,7 @@ export default {
   width: 100%;
   height: 0.10vi;
   top: 1.4vw;
-  background: linear-gradient(to right, transparent, #ffffff 50%, transparent);
+  background: linear-gradient(to right, transparent, #06709d 50%, transparent);
   transform: scaleX(0.9);
   animation: underlineAnimation 8s infinite;
 }

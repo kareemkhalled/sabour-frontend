@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="data-holder2 underlined-text">
+    <div class="data-holder2 underlined-text underlined-text">
       <div class="img-wrapper">
         <!-- <img src="@/assets/remote_assets/icon/occupancy.svg" /> -->
       </div>

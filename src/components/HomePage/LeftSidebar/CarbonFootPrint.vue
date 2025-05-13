@@ -1,15 +1,19 @@
 <template>
   <div class="carbon-wrapper">
-    <div class="px12" >
-      <div class="underline" style="width: 30%;margin-bottom: .7vh;margin-top: .5vh;padding-left: 0.4vi;color: white;white-space: nowrap;">
-       Carbon Foot Print
+    <div class="px12">
+      <div class="underline" style="font-size:.6vi ; font-weight:350; width: 30%; margin-bottom: .7vh; margin-top: .5vh; padding-left: 0.4vi; color: white; white-space: nowrap;">
+        Carbon Foot Print
       </div>
     </div>
 
     <div class="Dounght_chart">
       <DoughnutChart
-        :value="100"
-        :segment-values="[35, 25, 40]"
+        :value="data.totalValue"
+        :segment-values="[
+          data.carbonResidentialPercentage,
+          data.carbonCommercialPercentage,
+          data.carbonInfrastructurePercentage
+        ]"
         :segment-colors="[colors.dounght3, colors.dounght2, colors.dounght4]"
         bg_color="#000"
         center-text="Total"
@@ -18,6 +22,7 @@
         width="5.8vi"
         unit=" "
       />
+
       <div class="doughnut-container">
         <!-- Row 1 -->
         <div class="data-row">
@@ -25,8 +30,8 @@
             <img class="dot" src="@/assets/remote_assets/icon/rcfp.svg" alt="" />
             Residention
           </div>
-          <span class="value" style="color: #d4c464;">14 kg</span>
-          <span class="percentage" style="color: #d4c464;">35 %</span>
+          <span class="value" style="color: #d4c464;">{{ data.carbonResidential }} kg</span>
+          <span class="percentage" style="color: #d4c464;">{{ data.carbonResidentialPercentage }} %</span>
         </div>
         <!-- Row 2 -->
         <div class="data-row">
@@ -34,8 +39,8 @@
             <img class="dot" src="@/assets/remote_assets/icon/ccfp.svg" alt="" />
             Commercial
           </div>
-          <span class="value" style="color: #e29003;">9 kg</span>
-          <span class="percentage" style="color: #e29003;">25 %</span>
+          <span class="value" style="color: #e29003;">{{ data.carbonCommercial }} kg</span>
+          <span class="percentage" style="color: #e29003;">{{ data.carbonCommercialPercentage }} %</span>
         </div>
         <!-- Row 3 -->
         <div class="data-row">
@@ -43,8 +48,8 @@
             <img class="dot" src="@/assets/remote_assets/icon/icfp.svg" alt="" />
             Infrastructure
           </div>
-          <span class="value" style="color: #b2b1b5;">16 kg</span>
-          <span class="percentage" style="color: #b2b1b5;">40 %</span>
+          <span class="value" style="color: #b2b1b5;">{{ data.carbonInfrastructure }} kg</span>
+          <span class="percentage" style="color: #b2b1b5;">{{ data.carbonInfrastructurePercentage }} %</span>
         </div>
       </div>
     </div>
@@ -53,6 +58,10 @@
 
 <script setup>
 import DoughnutChart from '@/components/DoughnutChart.vue';
+import { reactive } from 'vue';
+import { Data } from '@/helpers/data_sample';
+
+const data = reactive(Data);
 
 const colors = {
   dounght3: '#d4c464',
@@ -77,6 +86,7 @@ const colors = {
   border-bottom: none;
   border-top: none;
   border-right: none;
+  margin-top: -0.7vh;
 }
 
 .Dounght_chart {
@@ -131,7 +141,8 @@ const colors = {
   height: 0.6vi;
 }
 
-.value, .percentage {
+.value,
+.percentage {
   font-weight: 500;
   font-size: 0.6vi;
 }

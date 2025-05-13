@@ -32,3 +32,23 @@ export function get_microphone_device() {
     }
   })
 }
+
+/**
+ * Get Permission for the microphone
+ */
+export function get_microphone_permission() {
+  let microphone = get_microphone_device()
+  microphone
+    .then((stream) => {
+      if (stream) {
+        stream.getTracks().forEach((track) => track.stop())
+      }
+    })
+    .catch((e) => {
+      console.error(e)
+    })
+}
+
+export function msToHours(milliseconds) {
+  return Math.floor(milliseconds / (1000 * 60 * 60))
+}

@@ -1,7 +1,8 @@
+   
 
 <template>
   <div >
-    <div class=" data-holder2 section-title">
+     <div class=" data-holder2 section-title underlined-text">
       <div class="square-icon"></div>
       <div>Energy Consumption Runtime</div>
     </div>
@@ -47,6 +48,7 @@ import { ref  ,watch ,computed} from 'vue';
 import AnimatedGradully from '@/components/AnimatedGradully.vue'
 import RadialElec from "@/components/RadialElec.vue";
 import ElecrticalRadialCom from "@/components/ElecrticalRadialCom.vue";
+
 
 // Function to clear the active interval
 const newValue = ref(3000);
@@ -150,7 +152,7 @@ top: -.5vi;}
   align-items: center;
   justify-content: space-around;
   color: #a1a1a1;
-  background-color:#151202;
+  background-color: rgba(108, 116, 128, 0.19);
   height: 1.5vi; 
   font-weight: 500;
   border-radius: .8vi;
@@ -159,18 +161,18 @@ top: -.5vi;}
   top: -.6vi;
  
 }
-/* 
+
 .underline::after {
   content: '';
   position: absolute;
   left: 0;
   width: 100%;
   height: .10vi;
-  top: 32.70vi;
-  background: linear-gradient(to right, transparent, #ffffff 50%, transparent);
+  top: 1.25vi;
+  background: linear-gradient(to left, transparent, #01eeff 30%, transparent);
   transform: scaleX(0.9);
   animation: underlineAnimation 8s infinite;
-} */
+}
 
 
 .fire-icon {

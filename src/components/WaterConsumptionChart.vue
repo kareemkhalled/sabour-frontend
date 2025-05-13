@@ -254,6 +254,7 @@ import BasicProgressBar from '@/components/BasicProgressBar.vue'
   width: 100%; /* Matches text width */
   height: .10vi; /* Thickness of the underline */
   /* background-color: #8a6c4c;  */
-  background:linear-gradient(to right, transparent, #f1f3fa 50%, transparent);}
+  background: linear-gradient(to right, transparent, #06709d 50%, transparent);
+}
 
   </style> 

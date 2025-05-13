@@ -1,6 +1,6 @@
 <template>
   <div>
-   <div class=" data-holder2 section-title" style="width: 20vw;">
+   <div class=" data-holder2 section-title underlined-text" style="width: 20vw;">
       <div class="square-icon"></div>
       <div>   Real Time Systems 
 </div>

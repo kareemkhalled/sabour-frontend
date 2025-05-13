@@ -4,7 +4,7 @@
     <div>
        <div class="px12" >
       <div class="underline" style="width: 30%;margin-bottom: .7vh;margin-top: .5vh;padding-left: 0.4vi;color: white;white-space: nowrap;">
-        Operation Cost - Runtime (EGP)
+        Operation Cost - Runtime (OR)
       </div>
     </div>
         <div class="chartTitles" > 
@@ -93,7 +93,7 @@ const ElEButtonClick = () => {
   isOxygenClicked.value = false;
   isWaterClicked.value = false;
   chart_unit.value='EGP';
-  startUpdatingChart('#e8bf58', '#00c9c922', 4000, 4500);
+  startUpdatingChart('#e8bf58', '#00c9c922', 40000, 40500);
 };
 
 const WaterButtonClick = () => {
@@ -102,7 +102,7 @@ const WaterButtonClick = () => {
   isELEClicked.value = false;
   isOxygenClicked.value = false;
   chart_unit.value="EGP";
-  startUpdatingChart('#56ace0', '#56ace022', 120, 150);
+  startUpdatingChart('#56ace0', '#56ace022', 70000, 71000);
 };
 
 const OxygenButtonClick = () => {
@@ -111,10 +111,10 @@ const OxygenButtonClick = () => {
   isELEClicked.value = false;
   isWaterClicked.value = false;
   chart_unit.value="m³";
-  startUpdatingChart('#c25700', '#c2570022', 90, 130);
+  startUpdatingChart('#c25700', '#c2570022', 62000, 63000);
 };
 onMounted(()=>{
-  startUpdatingChart('#e8bf58', '#00c9c922', 4000, 4500);
+  startUpdatingChart('#e8bf58', '#00c9c922', 40000, 41000);
 
 })
 // Cleanup interval on component unmount

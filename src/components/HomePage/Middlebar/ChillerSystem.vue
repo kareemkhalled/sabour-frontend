@@ -1,7 +1,7 @@
        
 <template>
   <div class="chiller-system">
-    <div class=" data-holder2 section-title" style="width: 20vw;">
+    <div class=" data-holder2 section-title underlined-text" style="width: 20vw;">
       <div class="square-icon"></div>
       <div> Chillers System</div>
     </div>
@@ -12,7 +12,7 @@
           Consumptions:
         </span>
         <span style="padding-left: .2vi;">
-          <AnimatedGradully :targetVolume="9736" :duration="2000" unit="Kw" unit-color="#DBCEF3" />
+          <AnimatedGradully :targetVolume="20736" :duration="2000" unit="kW" unit-color="#DBCEF3" />
         </span>
       </div>
       <div class="chiller-cost">
@@ -20,7 +20,7 @@
           Cost:
         </span>
         <span style="padding-left: .2vi;">
-          <AnimatedGradully :targetVolume="18751" :duration="2000" unit="SR" unit-color="#DBCEF3" />
+          <AnimatedGradully :targetVolume="50751" :duration="2000" unit="OR" unit-color="#DBCEF3" />
         </span>
       </div>
         
@@ -136,7 +136,7 @@ onMounted(() => {
   width: 100%;
   height: 0.2vh;
   margin-top: .3vh;
-  background: linear-gradient(to right, transparent, #1b606b 50%, transparent);
+  background: linear-gradient(to right, transparent, #0704e3 90%, transparent);
   transform: scaleX(0.9);
   animation: underlineAnimation 8s infinite;
 }

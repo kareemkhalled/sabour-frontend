@@ -1,14 +1,15 @@
 <script>
 // import InfoCom from "@/components/InfoCom.vue";
 // import InfoCom2 from "@/components/InfoCom2.vue";
-import { ref } from 'vue';
-
+import { ref } from "vue";
+import Recorder from "@/components/Recorder.vue";
 
 export default {
   name: "NavbarComponent",
   components: {
     // InfoCom,
     // InfoCom2,
+    Recorder,
   },
   setup() {
     const menuItems = ref([
@@ -24,7 +25,6 @@ export default {
     return { menuItems };
   },
 };
-
 </script>
 
 <template>
@@ -34,39 +34,71 @@ export default {
         <img src="@/assets/remote_assets/icon/EMSLogo2.png" />
       </div>
       <!-- <InfoCom2 /> -->
-
     </div>
-    
+
     <div>
       <ul class="menu">
         <div class="links-group">
-          <li class="menu-item" :class="no - hover"><router-link to="/HomeView2">Home</router-link></li>
-          <li class="menu-item"><router-link to="/HomeView2">Residential</router-link></li>
-          <li class="menu-item"><router-link to="/">Commercial</router-link></li>
+          <li class="menu-item" :class="no - hover">
+            <router-link to="/HomeView2">Home</router-link>
+          </li>
+          <li class="menu-item">
+            <router-link to="/HomeView2">Residential</router-link>
+          </li>
+          <li class="menu-item">
+            <router-link to="/">Commercial</router-link>
+          </li>
         </div>
-        <div style="display: flex;flex-direction: column; align-items: center; ;">
+        <div style="display: flex; flex-direction: column; align-items: center">
           <!-- <img src="@/assets/remote_assets/Atal/Logo9.png" style="width: 4.7vi;height: 1.7vi; margin-top: 1vi;border-radius:50%; "/> -->
-          <div class="park-lane"><img src="@/assets/remote_assets/Atal/Logo9 (1).png" style="width: 8vi;height: 6vi; margin-top:-4vi;margin-bottom:-2vh; border-radius:0% "/><span></span></div>
+          <div class="park-lane">
+            <img
+              src="@/assets/remote_assets/Atal/Logo9 (1).png"
+              style="
+                width: 8vi;
+                height: 6vi;
+                margin-top: -4vi;
+                margin-bottom: -2vh;
+                border-radius: 0%;
+              "
+            /><span></span>
+          </div>
           <!-- <div class="park-lane">PARK LANE <span></span></div> -->
         </div>
         <div class="links-group">
-          <li class="menu-item"><router-link to="/BuildingView">Energy</router-link></li>
+          <li class="menu-item">
+            <router-link to="/BuildingView">Energy</router-link>
+          </li>
           <li class="menu-item"><router-link to="/">Security</router-link></li>
           <li class="menu-item"><router-link to="/">Safety</router-link></li>
         </div>
       </ul>
     </div>
-    
-    <div>
-      <div class="logo" style="height:5.5vi; width:14vw; margin-top:-2.5vh" >
-        <img src="@/assets/remote_assets/Atal/newlogo.png"  />
-        
 
+    <div>
+      <div class="logo" style="height: 5.5vi; width: 14vw; margin-top: -2.5vh">
+        <img src="@/assets/remote_assets/Atal/newlogo.png" />
       </div>
-      <InfoCom />
+      <div class="wrapper">
+        <div class="data-holder" style="top: 120%; left: 70%">
+          <span
+            style="
+              align-items: center;
+              justify-content: center;
+              font-size: 0.8vi;
+              font-weight: 700;
+              color: #5492e9;
+              padding-bottom: 2.5vi;
+              user-select: none;
+            "
+          >
+            Voice Assistant
+          </span>
+          <Recorder :station_id="'attal-parklane'" />
+        </div>
+      </div>
     </div>
 
-    
     <!-- <div class="wrapper">
       <div class="data-holder" style="top: 80%; left: 75%">
         <span class="cgreen" style="font-size: 1vi; font-weight: bold; user-select: none"
@@ -75,13 +107,9 @@ export default {
         <Recorder :station_id="'smc'" />
       </div>
     </div> -->
-    
   </div>
-  
-
 </template>
 <style scoped>
-
 /* header{
   z-index: 999;
   position: relative;
@@ -104,22 +132,22 @@ export default {
   position: absolute;
   content: "";
   left: -6%;
-  width: .1vi;
+  width: 0.1vi;
   height: 79%;
   transform: rotate(-50deg);
   background-color: rgb(204, 119, 34, 0.5);
-  bottom: -.3vi;
+  bottom: -0.3vi;
 }
 
 .park-lane::after {
   position: absolute;
   content: "";
   right: -6%;
-  width: .1vi;
+  width: 0.1vi;
   height: 79%;
   transform: rotate(50deg);
   background-color: rgb(204, 119, 34, 0.5);
-  bottom: -.3vi;
+  bottom: -0.3vi;
 }
 
 /* @media (max-width: 1500px) {
@@ -139,29 +167,28 @@ export default {
 .park-lane span {
   position: absolute;
   width: 100%;
-  height: .15vi;
+  height: 0.15vi;
   background-color: rgb(204, 119, 34, 0.5);
   bottom: 0;
-  left: 0
+  left: 0;
 }
 
 .links-group {
-  border-bottom: .15vi solid rgb(204, 119, 34, 0.5);
+  border-bottom: 0.15vi solid rgb(204, 119, 34, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2vi;
   margin: 0 1.4vi;
-  margin-top: .2vi;
+  margin-top: 0.2vi;
 }
 
 .main-container {
   /* background-color: #00000096; */
   /* background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, .7));
   box-shadow: 0 1vi 2vi rgba(0, 0, 0, 0.9); */
-   background:linear-gradient(to bottom,  rgba(127, 124, 105, 0)-285%,
-    rgb(21, 20, 15));;
-    box-shadow: 10px 0 20px rgba(24, 24, 24, 0.9),0 -25px 20px rgba(24, 24, 24, 2);
+ background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0.605));
+  box-shadow: 0 .5vi 1vi rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -191,8 +218,8 @@ export default {
   z-index: 1000;
   background-color: #000;
   /* Example color */
-  padding: .05vi .1vi;
-  box-shadow: 0 .25vi .25vi rgba(0, 0, 0, 0.1);
+  padding: 0.05vi 0.1vi;
+  box-shadow: 0 0.25vi 0.25vi rgba(0, 0, 0, 0.1);
 }
 
 .wrapper {
@@ -209,10 +236,9 @@ export default {
 
 .navbar {
   background-color: transparent;
-  padding: .5vi;
+  padding: 0.5vi;
   z-index: 3;
   /* position: absolute; */
-
 }
 
 .menu {
@@ -222,7 +248,7 @@ export default {
   align-items: center;
   padding: 0;
   margin: 0;
-  gap: .5vi;
+  gap: 0.5vi;
   width: 100%;
   margin-bottom: 1vh;
 }
@@ -233,16 +259,15 @@ export default {
   }
 } */
 
-
 .menu-item a {
   text-decoration: none;
   font-size: 1.1vi;
   font-weight: 500;
   color: #fff;
-  padding: .5vw;
+  padding: 0.5vw;
 
-  border-top-left-radius: .25vi;
-  border-top-right-radius: .25vi;
+  border-top-left-radius: 0.25vi;
+  border-top-right-radius: 0.25vi;
   transition: 0.3s;
 }
 
@@ -256,6 +281,6 @@ export default {
   /* Error: double dot in class selector */
   background-color: transparent;
   color: inherit;
-  cursor: inherit
+  cursor: inherit;
 }
 </style>
